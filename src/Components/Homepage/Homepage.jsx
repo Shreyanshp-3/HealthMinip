@@ -110,7 +110,7 @@ const Homepage = () => {
                         Want to eat more mindfully? Track meals, learn about your habits, and reach your goals with MyFitness.</Text>
                     {/* <br/> */}
                     <Button size='md' colorScheme='purple' mt='24px'>
-                        Create a free account
+                        Create a free accoun
                     </Button>
                 </Box>
             </GridItem>

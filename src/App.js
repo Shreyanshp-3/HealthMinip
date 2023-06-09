@@ -1,11 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar';
+import { Box, Grid, GridItem } from '@chakra-ui/react'
 
 
 
 // for the navigation side bar
 import Mhomepage from './Components/Homepage/Mhomepage';
-
+import Dl_Navbar from './Components/DietLibrary/DietLib_Navbar/Dl_Navbar';
 
 
 //for the navdata importing the links
@@ -15,7 +16,6 @@ import Homepage from './Components/Homepage/Homepage';
 
 
 
-import { Box, Grid, GridItem } from '@chakra-ui/react'
 function App() {
     return (
         <>
@@ -37,6 +37,7 @@ function App() {
                     >
                         <Routes>
                             <Route exact path='/' element={<Mhomepage />} />
+                            <Route exact path='/DietLibrary' element={<Dl_Navbar />} />
                         </Routes>
                     </GridItem>
 

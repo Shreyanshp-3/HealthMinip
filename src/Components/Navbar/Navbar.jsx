@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
-
+import { Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "./crown.svg";
 
 const NavBar = (props) => {
@@ -71,14 +71,14 @@ const MenuLinks = ({ isOpen }) => {
                 direction={["column", "row", "row", "row"]}
                 pt={[4, 4, 0, 0]}
             >
-                <MenuItem to="/"
-                >Home</MenuItem>
-                <MenuItem to="/"
-                > Diet Library </MenuItem>
-                <MenuItem to="/"
-                > Foods</MenuItem>
-                <MenuItem to="/"
-                > Exercise & Diseases </MenuItem>
+                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/DietLibrary">Diet Library</Link>
+
+                <Link className="nav-link" to="/">Food Library</Link>
+
+                <Link className="nav-link" to="/">Exercise</Link>
+                <Link className="nav-link" to="/">Symptom Prediction</Link>
+
                 <MenuItem to="/" text-size="1.3rem" isLast>
                     <Button
                         size="sm"
