@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './Components/Navbar/Navbar';
 
+
+
+// for the navigation side bar
+import Mhomepage from './Components/Homepage/Mhomepage';
+
+
+
+//for the navdata importing the links
+import Homepage from './Components/Homepage/Homepage';
+
+
+
+
+
+import { Box, Grid, GridItem } from '@chakra-ui/react'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <>
+            {/* this is the fixed navbar */}
+            <Navbar />
+            <div className='routes1'>
 
+                <Grid templateColumns="repeat(6,1fr)" bg="white">
+
+
+                    {/* this is the new navbar of the item list present in the columns */}
+                    <GridItem
+                        as="main"
+                        colSpan={{ base: 6, lg: 2, xl: 1 }}
+                        bg="purple.400"
+                        minHeight={{ base: "20vh", lg: '40vh', xl: "100vh" }}
+                        p={{ base: "3rem 3rem 0rem 3rem ", lg: "5rem 0rem 4rem 4rem", xl: "2rem" }}
+                        width="100%"
+                    >
+                        <Routes>
+                            <Route exact path='/' element={<Mhomepage />} />
+                        </Routes>
+                    </GridItem>
+
+
+                    {/* this is the new navdata for the items according to it */}
+                    <GridItem
+                        as="main"
+                        colSpan={{ base: 6, lg: 4, xl: 5 }}
+                        p="3rem"
+                        width="100%"
+                    >
+                        <Routes>
+                            <Route exact path='/' element={<Homepage />} />
+
+                        </Routes>
+                    </GridItem>
+                </Grid>
+            </div >
+        </>
+    );
+}
 export default App;
