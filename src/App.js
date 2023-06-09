@@ -1,18 +1,22 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar';
-import { Box, Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react'
 
 
 
 // for the navigation side bar
 import Mhomepage from './Components/Homepage/Mhomepage';
-import Dl_Navbar from './Components/DietLibrary/DietLib_Navbar/Dl_Navbar';
-
+import Dl_Navbar from './Components/DietLibrary/DietLib_Navbar/Dl_Navbar'
 
 //for the navdata importing the links
 import Homepage from './Components/Homepage/Homepage';
-
-
+import Dl_Navdata from './Components/DietLibrary/DietLib_Navbar/Dl_Navdata';
+import LowDiet from './Components/DietLibrary/Pages/LowDiet';
+import KetoDiet from './Components/DietLibrary/Pages/KetoDiet';
+import HighProtein from './Components/DietLibrary/Pages/HighProtein';
+import LowFatdiet from './Components/DietLibrary/Pages/LowFatdiet';
+import VeganDiet from './Components/DietLibrary/Pages/VeganDiet';
+import Vegetarian from './Components/DietLibrary/Pages/Vegetarian';
 
 
 
@@ -38,6 +42,14 @@ function App() {
                         <Routes>
                             <Route exact path='/' element={<Mhomepage />} />
                             <Route exact path='/DietLibrary' element={<Dl_Navbar />} />
+                            {/* routes to the pages inside the Diet Library */}
+                            <Route exact path='/DietLibrary/LowDiet' element={<Dl_Navbar />} />
+                            <Route exact path='/DietLibrary/KetoDiet' element={<Dl_Navbar  />} />
+                            <Route exact path='/DietLibrary/HighProtein' element={<Dl_Navbar  />} />
+                            <Route exact path='/DietLibrary/LowFatdiet' element={<Dl_Navbar  />} />
+                            <Route exact path='/DietLibrary/VeganDiet' element={<Dl_Navbar  />} />
+                            <Route exact path='/DietLibrary/Vegetarian' element={<Dl_Navbar  />} />
+
                         </Routes>
                     </GridItem>
 
@@ -51,6 +63,14 @@ function App() {
                     >
                         <Routes>
                             <Route exact path='/' element={<Homepage />} />
+                            <Route exact path='/DietLibrary' element={<Dl_Navdata />} />
+                            {/* routes to the pages inside the Diet Library */}
+                            <Route exact path='/DietLibrary/LowDiet' element={<LowDiet />} />
+                            <Route exact path='/DietLibrary/KetoDiet' element={<KetoDiet />} />
+                            <Route exact path='/DietLibrary/HighProtein' element={<HighProtein />} />
+                            <Route exact path='/DietLibrary/LowFatdiet' element={<LowFatdiet />} />
+                            <Route exact path='/DietLibrary/VeganDiet' element={<VeganDiet />} />
+                            <Route exact path='/DietLibrary/Vegetarian' element={<Vegetarian />} />
 
                         </Routes>
                     </GridItem>
