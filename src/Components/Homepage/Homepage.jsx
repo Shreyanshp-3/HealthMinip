@@ -127,7 +127,7 @@ const Homepage = () => {
             >
                 <br />
                 <br />
-                
+
                 <Box maxW='64rem'>
                     <Heading size='lg' fontSize={{ base: "2.5rem", lg: "2rem", xl: "3.5rem" }}>
                         The Tools for Your Goals

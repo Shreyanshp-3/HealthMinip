@@ -32,7 +32,7 @@ const Dl_Navdata = () => {
                 className='hidden'
                 as="main"
                 colSpan={{ base: 6, lg: 6, xl: 6 }}
-                p="3rem"
+                p={{ base: "0rem", md: "3rem", xl: "3rem" }}
             >
                 <Box maxW='64rem'>
                     <Heading mb={4} fontSize='3.5rem'>Diet Libraries</Heading>
@@ -49,8 +49,10 @@ const Dl_Navdata = () => {
                 className='hidden'
                 as="main"
                 colSpan={{ base: 6, lg: 6, xl: 6 }}
-                p="3rem"
+                p={{ base: "0rem", md: "3rem", xl: "3rem" }}
             >
+                <br />
+                <br />
                 <Box maxW='64rem'>
                     <Heading mb={4} fontSize='3rem'> Planning Weight, Calories & Nutrients</Heading>
 
@@ -82,7 +84,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Discover how calories planning works at My Fitness App to help your weight goal.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -114,7 +119,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Learn how to customize you targets and track more than 50000 nutrients with My fitness .
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -130,7 +138,7 @@ const Dl_Navdata = () => {
                 className='hidden'
                 as="main"
                 colSpan={{ base: 6, lg: 6, xl: 6 }}
-                p="3rem"
+                p={{ base: "0rem", md: "3rem", xl: "3rem" }}
             >
                 <Box maxW='64rem'>
                     <Heading mb={4} fontSize='3rem'> Basics of Tracking</Heading>
@@ -161,7 +169,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     This article discuss the many benefits of keeping a food diary.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -193,7 +204,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Practical tips on portion control including how to measure and estimate portion size.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -225,7 +239,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Learn how to leverage MY FItNESS food database, making it which and easy to log your food.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -257,7 +274,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Do you love to cook but little time to enter all the recipie ingredients for tracking? My FITNESS make it easy to import recipes from the web.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -274,7 +294,7 @@ const Dl_Navdata = () => {
                 className='hidden'
                 as="main"
                 colSpan={{ base: 6, lg: 6, xl: 6 }}
-                p="3rem"
+                p={{ base: "0rem", md: "3rem", xl: "3rem" }}
             >
                 <Box maxW='64rem'>
                     <Heading mb={4} fontSize='3rem'> Weight loss and Maintenance</Heading>
@@ -305,7 +325,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Tips on how to select a diet that is safe and works well for you.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -337,7 +360,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Learn what drivers us to overeat and what you can do about it .
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -369,7 +395,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     This article explains why you might have stopped losing weight and offers tips for breaking the plateau.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -401,7 +430,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Congratulations, you have achieved your goal, Now what do you do? .
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -416,7 +448,7 @@ const Dl_Navdata = () => {
                 className='hidden'
                 as="main"
                 colSpan={{ base: 6, lg: 6, xl: 6 }}
-                p="3rem"
+                p={{ base: "0rem", md: "3rem", xl: "3rem" }}
             >
                 <Box maxW='64rem'>
                     <Heading mb={4} fontSize='3rem'> Nutrition Basics</Heading>
@@ -447,7 +479,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Learn about different types of fats and how to make healthier food choices
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -479,7 +514,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     This article describes what Carbohydrates are and how to make healthier carb choices.
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -511,7 +549,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Learn about animal and plant sources of protein and how teo make smart choices if you are trying to lose .
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -543,7 +584,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     Learn how to customize you targets and track more than 50000 nutrients with My fitness .
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -559,8 +603,10 @@ const Dl_Navdata = () => {
                 className='hidden'
                 as="main"
                 colSpan={{ base: 6, lg: 6, xl: 6 }}
-                p="3rem"
+                p={{ base: "0rem", md: "3rem", xl: "3rem" }}
             >
+                <br />
+                <br />
                 <Box maxW='64rem'>
                     <Heading mb={4} fontSize='3rem'> Healthy Eating and Exercise</Heading>
 
@@ -575,6 +621,8 @@ const Dl_Navdata = () => {
             >
                 <Box maxW='64rem'>
                     <Card maxW='sm'
+                                            maxH="40rem"
+
                         bg="white"
                         borderTop="8px"
                         borderColor="purple.400"
@@ -590,7 +638,10 @@ const Dl_Navdata = () => {
                                 <Text>
                                     This article explains what it is and how to use it to make healthier and food choices
                                 </Text>
-
+                                <Button size='md' colorScheme='purple' mt='24px'
+                                >
+                                    Create a free account
+                                </Button>
                             </Stack>
                         </CardBody>
 
@@ -605,33 +656,38 @@ const Dl_Navdata = () => {
                 colSpan={{ base: 6, lg: 6, xl: 3 }}
                 p={{ base: "1rem", md: "1rem 3rem 1rem 11rem", xl: "3rem" }}
             >
-                <Box maxW='64rem'>
+                <Box maxW='64rem'
+                >
                     <Card maxW='sm'
+                        // maxH="40rem"
                         bg="white"
-                        borderTop="8px"
-                        borderColor="purple.400"
+                    borderTop="8px"
+                    borderColor="purple.400"
                     >
-                        <CardBody>
-                            <Image
-                                src={m14}
-                                alt='Green double couch with wooden legs'
-                                borderRadius='lg'
-                            />
-                            <Stack mt='6' spacing='3'>
-                                <Heading size='md'>Carbohydrates: Starch,sugar and fiber</Heading>
-                                <Text>
-                                    This article describes what Carbohydrates are and how to make healthier carb choices.
-                                </Text>
+                    <CardBody>
+                        <Image
+                            src={m14}
+                            alt='Green double couch with wooden legs'
+                            borderRadius='lg'
+                        />
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>Carbohydrates: Starch,sugar and fiber</Heading>
+                            <Text>
+                                This article describes what Carbohydrates are and how to make healthier carb choices.
+                            </Text>
+                            <Button size='md' colorScheme='purple' mt='24px'
+                            >
+                                Create a free account
+                            </Button>
+                        </Stack>
+                    </CardBody>
 
-                            </Stack>
-                        </CardBody>
+                </Card>
 
-                    </Card>
+            </Box>
+        </GridItem>
 
-                </Box>
-            </GridItem>
-
-        </Grid>
+        </Grid >
     )
 }
 
