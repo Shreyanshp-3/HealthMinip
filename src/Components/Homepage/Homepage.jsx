@@ -13,6 +13,8 @@ import r3 from './Images/r3.webp';
 
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import ColorModeToggle from './ColorModeToggle';
+import Rough from '../Rough/Rough';
 
 
 
@@ -48,6 +50,18 @@ const Homepage = () => {
         <Grid templateColumns="repeat(6,1fr)" bg="white">
 
 
+            {/* <GridItem
+                data-aos="fade-up"
+                className='hidden'
+                as="main"
+                colSpan={{ base: 6, lg: 6, xl: 6 }}
+                p={{ base: "1rem", md: "1rem 3rem 1rem 8rem", xl: "3rem" }}
+            >
+                <Box maxW='64rem'>
+                    <ColorModeToggle />
+                </Box>
+
+            </GridItem> */}
             <GridItem
                 data-aos="fade-up"
                 className='hidden'
@@ -63,7 +77,10 @@ const Homepage = () => {
                     <Button size='md' colorScheme='purple' mt='24px'
                     >
                         Create a free account
+
                     </Button>
+                    {/* <ColorModeToggle /> */}
+
                 </Box>
 
             </GridItem>
@@ -376,6 +393,20 @@ const Homepage = () => {
                         <Text fontSize={{ base: "l", lg: "lg", xl: "xl" }}>
                             MyHealthDiary is one of the best weight loss apps and fitness apps, helping nearly hundreds members reach their nutrition and fitness goals every year. Members use it as a calories tracker and calorie counter to log their foods, and take advantage of the app’s food database that contains over 14 million foods. It’s not just a free calorie counter app — it’s also the best calorie app, fitness app, diseases recognition for people who are looking to take back control of their health and fitness.                        </Text>
                     </Center>
+
+                </Box>
+            </GridItem>
+            <GridItem
+                className='hidden'
+                data-aos="fade-up"
+                as="main"
+                colSpan={{ base: 6, lg: 6, xl: 6 }}
+                p={{ base: "1rem", lg: "2rem", xl: "3rem" }}
+            >
+                <br />
+                <br />
+                <Box maxW='64rem'>
+                    <Rough />
 
                 </Box>
             </GridItem>

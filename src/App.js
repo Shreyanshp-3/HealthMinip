@@ -17,6 +17,9 @@ import HighProtein from './Components/DietLibrary/Pages/HighProtein';
 import LowFatdiet from './Components/DietLibrary/Pages/LowFatdiet';
 import VeganDiet from './Components/DietLibrary/Pages/VeganDiet';
 import Vegetarian from './Components/DietLibrary/Pages/Vegetarian';
+// food libraries
+import Food_Data from './Components/Food_Library/Food_Data';
+import Food_Nav from './Components/Food_Library/Food_Nav';
 
 
 
@@ -44,12 +47,14 @@ function App() {
                             <Route exact path='/DietLibrary' element={<Dl_Navbar />} />
                             {/* routes to the pages inside the Diet Library */}
                             <Route exact path='/DietLibrary/LowDiet' element={<Dl_Navbar />} />
-                            <Route exact path='/DietLibrary/KetoDiet' element={<Dl_Navbar  />} />
-                            <Route exact path='/DietLibrary/HighProtein' element={<Dl_Navbar  />} />
-                            <Route exact path='/DietLibrary/LowFatdiet' element={<Dl_Navbar  />} />
-                            <Route exact path='/DietLibrary/VeganDiet' element={<Dl_Navbar  />} />
-                            <Route exact path='/DietLibrary/Vegetarian' element={<Dl_Navbar  />} />
+                            <Route exact path='/DietLibrary/KetoDiet' element={<Dl_Navbar />} />
+                            <Route exact path='/DietLibrary/HighProtein' element={<Dl_Navbar />} />
+                            <Route exact path='/DietLibrary/LowFatdiet' element={<Dl_Navbar />} />
+                            <Route exact path='/DietLibrary/VeganDiet' element={<Dl_Navbar />} />
+                            <Route exact path='/DietLibrary/Vegetarian' element={<Dl_Navbar />} />
+                            <Route exact path='/FoodLibrary' element={<Food_Nav />} />
 
+                            {/* routes to the pages inside the Food  Library */}
                         </Routes>
                     </GridItem>
 
@@ -71,6 +76,10 @@ function App() {
                             <Route exact path='/DietLibrary/LowFatdiet' element={<LowFatdiet />} />
                             <Route exact path='/DietLibrary/VeganDiet' element={<VeganDiet />} />
                             <Route exact path='/DietLibrary/Vegetarian' element={<Vegetarian />} />
+
+                            {/* routes to the pages inside the Food  Library */}
+                            <Route exact path='/FoodLibrary' element={<Food_Data />} />
+
 
                         </Routes>
                     </GridItem>

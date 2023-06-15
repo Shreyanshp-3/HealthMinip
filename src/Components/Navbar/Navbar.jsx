@@ -74,7 +74,7 @@ const MenuLinks = ({ isOpen }) => {
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/DietLibrary">Diet Library</Link>
 
-                <Link className="nav-link" to="/">Food Library</Link>
+                <Link className="nav-link" to="/FoodLibrary">Food Library</Link>
 
                 <Link className="nav-link" to="/">Exercise</Link>
                 <Link className="nav-link" to="/">Symptom Prediction</Link>
