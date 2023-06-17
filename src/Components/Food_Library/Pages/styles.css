@@ -1,0 +1,10 @@
+.table {
+  overflow-x: scroll;
+}
+.datable {
+  display: block;
+  white-space: nowrap;
+
+  /* overflow-y: scroll; Show vertical scrollbar */
+  overflow-x: scroll; /* Show horizontal scrollbar */
+}

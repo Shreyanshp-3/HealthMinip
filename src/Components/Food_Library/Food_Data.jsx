@@ -8,6 +8,8 @@ import {
     UnorderedList,
 } from '@chakra-ui/react'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 const Food_Data = () => {
     return (
         <Grid templateColumns="repeat(6,1fr)" bg="white">

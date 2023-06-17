@@ -21,6 +21,9 @@ import Vegetarian from './Components/DietLibrary/Pages/Vegetarian';
 import Food_Data from './Components/Food_Library/Food_Data';
 import Food_Nav from './Components/Food_Library/Food_Nav';
 
+import Howto from './Components/Food_Library/Pages/Howto';
+import FoodNutrition from './Components/Food_Library/Pages/FoodNutrition';
+
 
 
 function App() {
@@ -53,6 +56,9 @@ function App() {
                             <Route exact path='/DietLibrary/VeganDiet' element={<Dl_Navbar />} />
                             <Route exact path='/DietLibrary/Vegetarian' element={<Dl_Navbar />} />
                             <Route exact path='/FoodLibrary' element={<Food_Nav />} />
+                            <Route exact path='/FoodLibrary/Howto' element={<Food_Nav />} />
+                            <Route exact path='/FoodLibrary/FoodNutrition' element={<Food_Nav />} />
+
 
                             {/* routes to the pages inside the Food  Library */}
                         </Routes>
@@ -79,6 +85,9 @@ function App() {
 
                             {/* routes to the pages inside the Food  Library */}
                             <Route exact path='/FoodLibrary' element={<Food_Data />} />
+                            <Route exact path='/FoodLibrary/Howto' element={<Howto />} />
+                            <Route exact path='/FoodLibrary/FoodNutrition' element={<FoodNutrition />} />
+
 
 
                         </Routes>

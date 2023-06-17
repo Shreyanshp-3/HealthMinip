@@ -1,7 +1,7 @@
 import { List, ListIcon, ListItem } from '@chakra-ui/react'
 import { React, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import {  CalendarIcon, CloseIcon, EditIcon, QuestionOutlineIcon, StarIcon } from "@chakra-ui/icons";
+import { CalendarIcon, CloseIcon, EditIcon, QuestionOutlineIcon, StarIcon } from "@chakra-ui/icons";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 const Food_Nav = () => {
@@ -22,9 +22,9 @@ const Food_Nav = () => {
           pb={{ base: "1rem", md: "1rem", xl: "1rem" }}
           data-aos="fade-right"
         >
-          <NavLink to="/DietLibrary/LowDiet">
+          <NavLink to="/FoodLibrary/Howto">
             <ListIcon as={CalendarIcon} color="white" />
-            Low Diet
+            How to search
           </NavLink>
         </ListItem>
         <ListItem
@@ -32,10 +32,10 @@ const Food_Nav = () => {
           data-aos="fade-right"
 
         >
-          <NavLink to="/DietLibrary/HighProtein">
+          <NavLink to="/FoodLibrary/FoodNutrition">
             <ListIcon as={QuestionOutlineIcon} color="white" />
 
-            HighProtein
+            Food Nutrition Value
           </NavLink>
         </ListItem>
         <ListItem
@@ -46,7 +46,7 @@ const Food_Nav = () => {
           <NavLink to="/DietLibrary/KetoDiet">
             <ListIcon as={EditIcon} color="white" />
 
-            Keto Diet
+            Recipes
           </NavLink>
         </ListItem>
 
@@ -57,7 +57,7 @@ const Food_Nav = () => {
         >
           <NavLink to="/DietLibrary/LowFatdiet">
             <ListIcon as={CloseIcon} color="white" />
-            Low fat Diet
+            Diet Plans
           </NavLink>
         </ListItem>
 
