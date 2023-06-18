@@ -52,7 +52,7 @@ const DataTable = () => {
                     p={{ base: "0rem", md: "1rem 3rem 1rem 8rem", xl: "3rem" }}
                 >
                     <Box maxW='64rem'>
-                        <Heading mb={4} fontSize={{ base: "2.5rem", lg: "2rem", xl: "3.5rem" }}>Good Health Starts with What you eat !</Heading>
+                        <Heading mb={4} fontSize={{ base: "2.5rem", lg: "2rem", xl: "3.5rem" }}>Good Health Starts with What you eat!</Heading>
                         <Text fontSize='xl'>
                             Check the nutrtion value of the food you and then take decisions
                         </Text>

@@ -23,6 +23,11 @@ import Food_Nav from './Components/Food_Library/Food_Nav';
 
 import Howto from './Components/Food_Library/Pages/Howto';
 import FoodNutrition from './Components/Food_Library/Pages/FoodNutrition';
+import DietPlanner from './Components/Food_Library/Pages/DietPlanner';
+import DietPlanGenerator from './Components/Food_Library/Pages/DietPlanGenerator';
+import RecipeSearch from './Components/Food_Library/Pages/RecipeSearch';
+import SymptomPrediction from './Components/SymptomPrediction/SymptomPrediction';
+import SymptomNav from './Components/SymptomPrediction/SymptomNav';
 
 
 
@@ -55,12 +60,18 @@ function App() {
                             <Route exact path='/DietLibrary/LowFatdiet' element={<Dl_Navbar />} />
                             <Route exact path='/DietLibrary/VeganDiet' element={<Dl_Navbar />} />
                             <Route exact path='/DietLibrary/Vegetarian' element={<Dl_Navbar />} />
+
+                            {/* routes to the pages inside the Food  Library */}
                             <Route exact path='/FoodLibrary' element={<Food_Nav />} />
                             <Route exact path='/FoodLibrary/Howto' element={<Food_Nav />} />
                             <Route exact path='/FoodLibrary/FoodNutrition' element={<Food_Nav />} />
+                            <Route exact path='/FoodLibrary/Dietplanner' element={<Food_Nav />} />
+                            <Route exact path='/FoodLibrary/DietPlanGenerator' element={<Food_Nav />} />
+                            <Route exact path='/FoodLibrary/RecipeSearch' element={<Food_Nav />} />
 
+                            {/* routes to the pages inside the symptom */}
+                            <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomNav/>} />
 
-                            {/* routes to the pages inside the Food  Library */}
                         </Routes>
                     </GridItem>
 
@@ -87,6 +98,13 @@ function App() {
                             <Route exact path='/FoodLibrary' element={<Food_Data />} />
                             <Route exact path='/FoodLibrary/Howto' element={<Howto />} />
                             <Route exact path='/FoodLibrary/FoodNutrition' element={<FoodNutrition />} />
+                            <Route exact path='/FoodLibrary/DietPlanner' element={<DietPlanner />} />
+                            <Route exact path='/FoodLibrary/DietPlanGenerator' element={<DietPlanGenerator />} />
+                            <Route exact path='/FoodLibrary/RecipeSearch' element={<RecipeSearch />} />
+
+
+                            {/* routes to the pages inside the symptoms prediction pages */}
+                            <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomPrediction />} />
 
 
 
