@@ -70,6 +70,16 @@ const Food_Nav = () => {
             Custom Diet Plan
           </NavLink>
         </ListItem>
+        <ListItem
+          pb={{ base: "1rem", md: "1rem", xl: "1rem" }}
+          // data-aos="fade-right"
+
+        >
+          <NavLink to="/FoodLibrary/CalorieTracker">
+            <ListIcon as={CloseIcon} color="white" />
+            Calorie Tracker
+          </NavLink>
+        </ListItem>
 
       </List >
 

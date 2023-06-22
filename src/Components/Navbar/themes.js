@@ -8,7 +8,7 @@ const colors = {
     400: "#E39FF6",
     500: "#E39FF6", // the button
     600: "#E39FF6",
-    700: "#AC2CC4", // the name links in the navbar
+    700: "#AC2CC4" , // the name links in the navbar
     800: "#E39FF6",
     900: "#E39FF6"
   }
