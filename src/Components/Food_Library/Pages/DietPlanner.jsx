@@ -117,7 +117,7 @@ const PersonalDietPlanner = () => {
   if (!isAddingMealPlan) {
     return (
       <Box p={4}>
-        <Button colorScheme="teal" mb={4} onClick={handleGoBack}>
+        <Button colorScheme="purple" mb={4} onClick={handleGoBack}>
           Go Back
         </Button>
         <Heading mb={4}>Meal Plan History</Heading>
@@ -197,13 +197,13 @@ const PersonalDietPlanner = () => {
               required
             />
           </FormControl>
-          <Button type="submit" colorScheme="teal">
+          <Button type="submit" colorScheme="purple">
             Add Meal Plan
           </Button>
           <Button colorScheme="gray" onClick={handleViewHistory} mt={4}>
             View History
           </Button>
-          <Button colorScheme="teal" onClick={handleViewTodayMeal} mt={4}>
+          <Button colorScheme="purple" onClick={handleViewTodayMeal} mt={4}>
             View Today's Meal
           </Button>
         </VStack>

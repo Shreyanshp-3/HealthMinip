@@ -22,7 +22,7 @@ const DietPlanner = () => {
       const response = await axios.post(
         'https://api.openai.com/v1/engines/davinci/completions',
         {
-          prompt: `As a diet planner, create a meal plan for a person with the following preferences: ${userInput}`,
+          prompt: `As a diet planner, create a meal plan for a person with the following preferences:\n${userInput}`,
           max_tokens: 100,
           temperature: 0.7,
           n: 1,
@@ -90,4 +90,4 @@ const DietPlanner = () => {
   );
 };
 
-export default DietPlanner;
+export default DietPlanner;
