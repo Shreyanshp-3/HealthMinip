@@ -76,7 +76,7 @@ const MenuLinks = ({ isOpen }) => {
 
                 <Link className="nav-link" to="/FoodLibrary">Food Library</Link>
 
-                <Link className="nav-link" to="hgf">Exercise</Link>
+                <Link className="nav-link" to="/ExerciseLibrary/ExerciseLibrary">Exercise</Link>
                 <Link className="nav-link" to="/SymptomPrediction/SymptomPrediction">Symptom Prediction</Link>
 
                 <MenuItem to="/" text-size="1.3rem" isLast>

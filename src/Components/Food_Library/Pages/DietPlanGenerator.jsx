@@ -30,7 +30,7 @@ const DietPlanner = () => {
         {
           headers: {
             'Content-Type': 'application/json',
-            Authorization: 'Bearer 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',
+            Authorization: 'Bearer ',
           },
         }
       );

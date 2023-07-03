@@ -35,6 +35,8 @@ import Getcalorie from './Components/Food_Library/Pages/Getcalorie';
 import SymptomPrediction from './Components/SymptomPrediction/SymptomPrediction';
 import SymptomNav from './Components/SymptomPrediction/SymptomNav';
 import Signup from './Components/Signuppage/Signup';
+import ExerciseLibrary from './Components/ExerciseLibrary/ExerciseLibrary';
+import ExerciseNav from './Components/ExerciseLibrary/ExerciseNav';
 
 
 
@@ -81,6 +83,9 @@ function App() {
 
                             {/* routes to the pages inside the symptom */}
                             <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomNav />} />
+                            <Route exact path='/ExerciseLibrary/ExerciseLibrary' element={<ExerciseNav />} />
+
+                            {/* that exercise page */}
 
                         </Routes>
                     </GridItem>
@@ -119,6 +124,9 @@ function App() {
                             <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomPrediction />} />
                             <Route exact path='/Components/Signuppage' element={<Signup />} />
 
+                            {/* that exercise page */}
+
+                            <Route exact path='/ExerciseLibrary/ExerciseLibrary' element={<ExerciseLibrary />} />
 
 
                         </Routes>
