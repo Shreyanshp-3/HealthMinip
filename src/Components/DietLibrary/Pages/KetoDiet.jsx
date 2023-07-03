@@ -2,8 +2,27 @@ import { Box, Button, Card, CardBody, Grid, GridItem, Heading, Image, Stack, Tex
 import { React, useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+
+import { useDisclosure } from '@chakra-ui/react'
+import k1 from './images/k1.jpg';
+import k2 from './images/k2.jpeg';
+import k3 from './images/k3.jpeg';
+import k4 from './images/k4.jpeg';
+import k5 from './images/k5.jpeg';
+import k6 from './images/k6.jpeg';
 
 const KetoDiet = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -63,7 +82,7 @@ const KetoDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={k1}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -72,10 +91,10 @@ const KetoDiet = () => {
                 <Text>
                   You done your research and want to get started on a keto diet, but aren't sure where to begin? Follow these steps
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More !
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+              
               </Stack>
             </CardBody>
 
@@ -98,7 +117,7 @@ const KetoDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={k2}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -107,10 +126,10 @@ const KetoDiet = () => {
                 <Text>
                   Thinking about the monitoring ketones? You may get additional information about this down below
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+              
               </Stack>
             </CardBody>
 
@@ -133,7 +152,7 @@ const KetoDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={k3}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -142,10 +161,10 @@ const KetoDiet = () => {
                 <Text>
                   If you're on the keto diet, here are the top 10 keto foods to include.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+               
               </Stack>
             </CardBody>
 
@@ -168,7 +187,7 @@ const KetoDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={k4}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -177,10 +196,10 @@ const KetoDiet = () => {
                 <Text>
                   You won't regret putting these tasty staples in your shopping cart.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+               
               </Stack>
             </CardBody>
 
@@ -203,7 +222,7 @@ const KetoDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={k5}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -212,10 +231,10 @@ const KetoDiet = () => {
                 <Text>
                   Need help finding the beset keto Foods?. Follow the below like to get all the resources for keto diet.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+             
               </Stack>
             </CardBody>
 
@@ -238,7 +257,7 @@ const KetoDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={k6}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -246,10 +265,10 @@ const KetoDiet = () => {
                 <Heading size='md'>Are you missing out on these important keto micro nutrients?</Heading>
                 <Text>
                   Is your keto diet lacking in micro nutrients? Make sure you are getting these important vitamins and minerals if you are following a keto diet.                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+               
               </Stack>
             </CardBody>
 

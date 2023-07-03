@@ -28,6 +28,8 @@ import {
 } from '@chakra-ui/react';
 
 const App = () => {
+
+
   const [foodName, setFoodName] = useState('');
   const [calories, setCalories] = useState('');
   const [history, setHistory] = useState([]);
@@ -66,7 +68,7 @@ const App = () => {
       foodName,
       calories: parseInt(calories),
       date: new Date().toLocaleDateString(),
-      
+
     };
 
     setHistory([...history, newEntry]);

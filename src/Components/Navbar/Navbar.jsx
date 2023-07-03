@@ -81,7 +81,7 @@ const MenuLinks = ({ isOpen }) => {
 
                 <MenuItem to="/" text-size="1.3rem" isLast>
                     <Button
-                        size="sm"
+                        csize="sm"
                         rounded="md"
                         color={["primary.500", "primary.500", "white", "white"]}
                         bg={["white", "white", "primary.500", "primary.500"]}
@@ -89,7 +89,7 @@ const MenuLinks = ({ isOpen }) => {
                             bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
                         }}
                     >
-                        Sign in
+                <Link className="nav-link" to="/Components/Signuppage">Sign in</Link>
                     </Button>
                 </MenuItem>
             </Stack>

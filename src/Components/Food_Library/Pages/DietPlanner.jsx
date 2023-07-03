@@ -1,198 +1,216 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-  ChakraProvider,
   Box,
-  Flex,
-  Heading,
   Button,
+  FormControl,
+  FormLabel,
+  Grid,
+  GridItem,
+  Heading,
   Input,
-  VStack,
   Text,
-  IconButton,
-  CloseButton,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanel,
-  TabPanels,
+  VStack,
 } from '@chakra-ui/react';
-import { AddIcon } from '@chakra-ui/icons';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function MealPlanner() {
-  const [oneDayMeals, setOneDayMeals] = useState({ breakfast: '', lunch: '', dinner: '' });
-  const [weeklyMeals, setWeeklyMeals] = useState([]);
+const PersonalDietPlanner = () => {
+  const [mealPlans, setMealPlans] = useState([]);
+  const [selectedDay, setSelectedDay] = useState(1);
+  const [isAddingMealPlan, setIsAddingMealPlan] = useState(true);
+  const [formData, setFormData] = useState({
+    breakfast: '',
+    lunch: '',
+    dinner: '',
+    extras: '',
+  });
 
-  const addMeal = () => {
-    setWeeklyMeals([...weeklyMeals, { breakfast: '', lunch: '', dinner: '' }]);
+  const handleAddMealPlan = (event) => {
+    event.preventDefault();
+    if (!formData.breakfast || !formData.lunch || !formData.dinner || !formData.extras) {
+      toast.error('Please fill in all fields.', {
+        position: 'top-center',
+      });
+      return;
+    }
+    const newMealPlan = {
+      date: new Date().toISOString().split('T')[0],
+      ...formData,
+    };
+    setMealPlans((prevMealPlans) => [...prevMealPlans, newMealPlan]);
+    setFormData({
+      breakfast: '',
+      lunch: '',
+      dinner: '',
+      extras: '',
+    });
+    toast.success('Meal plan added successfully.', {
+      position: 'top-center',
+    });
   };
 
-  const updateOneDayMeal = (mealType, value) => {
-    setOneDayMeals({ ...oneDayMeals, [mealType]: value });
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
-  const updateWeeklyMeal = (index, mealType, value) => {
-    const updatedMeals = [...weeklyMeals];
-    updatedMeals[index][mealType] = value;
-    setWeeklyMeals(updatedMeals);
+  const handleDeleteMealPlan = (index) => {
+    confirmAlert({
+      title: 'Confirm Deletion',
+      message: 'Are you sure you want to delete this meal plan?',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => {
+            setMealPlans((prevMealPlans) =>
+              prevMealPlans.filter((_, i) => i !== index)
+            );
+            toast.success('Meal plan deleted successfully.', {
+              position: 'top-center',
+            });
+          },
+        },
+        {
+          label: 'No',
+          onClick: () => {},
+        },
+      ],
+    });
   };
 
-  const removeMeal = (index) => {
-    const updatedMeals = [...weeklyMeals];
-    updatedMeals.splice(index, 1);
-    setWeeklyMeals(updatedMeals);
+  useEffect(() => {
+    const storedMealPlans = JSON.parse(localStorage.getItem('mealPlans'));
+    if (storedMealPlans) {
+      setMealPlans(storedMealPlans);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('mealPlans', JSON.stringify(mealPlans));
+  }, [mealPlans]);
+
+  const handleViewHistory = () => {
+    setIsAddingMealPlan(false);
   };
+
+  const handleViewTodayMeal = () => {
+    const today = new Date().toISOString().split('T')[0];
+    const todayMealPlan = mealPlans.find((mealPlan) => mealPlan.date === today);
+    if (todayMealPlan) {
+      toast.info('Today\'s meal plan:', {
+        position: 'top-center',
+      });
+      console.log(todayMealPlan);
+    } else {
+      toast.info('No meal plan found for today.', {
+        position: 'top-center',
+      });
+    }
+  };
+
+  const handleGoBack = () => {
+    setIsAddingMealPlan(true);
+  };
+
+  if (!isAddingMealPlan) {
+    return (
+      <Box p={4}>
+        <Button colorScheme="teal" mb={4} onClick={handleGoBack}>
+          Go Back
+        </Button>
+        <Heading mb={4}>Meal Plan History</Heading>
+        {mealPlans.map((mealPlan, index) => (
+          <Box
+            key={index}
+            borderWidth={1}
+            borderRadius="md"
+            p={4}
+            mb={4}
+            boxShadow="md"
+          >
+            <Grid templateColumns="repeat(2, 1fr)" gap={4}>
+              <GridItem>
+                <Text>Date: {mealPlan.date}</Text>
+                <Text>Breakfast: {mealPlan.breakfast}</Text>
+                <Text>Lunch: {mealPlan.lunch}</Text>
+                <Text>Dinner: {mealPlan.dinner}</Text>
+                <Text>Extras: {mealPlan.extras}</Text>
+              </GridItem>
+              <GridItem>
+                <Button
+                  size="sm"
+                  colorScheme="red"
+                  mt={4}
+                  onClick={() => handleDeleteMealPlan(index)}
+                >
+                  Delete Meal Plan
+                </Button>
+              </GridItem>
+            </Grid>
+          </Box>
+        ))}
+        <ToastContainer position="top-center" autoClose={3000} />
+      </Box>
+    );
+  }
 
   return (
     <Box p={4}>
-      <Flex direction="column" align="center" justify="center">
-        <Heading as="h1" size="lg" mb={4}>
-          Meal Planner
-        </Heading>
-        <Tabs variant="enclosed">
-          <TabList>
-            <Tab>One Day Plan</Tab>
-            <Tab>One Week Plan</Tab>
-          </TabList>
-          <TabPanels mt={4}>
-            <TabPanel>
-              <VStack spacing={4} width="100%">
-                <Flex align="center" width="100%">
-                  <Text fontWeight="bold" flex="0 0 30%">
-                    Breakfast:
-                  </Text>
-                  <Input
-                    value={oneDayMeals.breakfast}
-                    onChange={(e) => updateOneDayMeal('breakfast', e.target.value)}
-                    placeholder="Enter breakfast"
-                    width="100%"
-                    marginLeft={2}
-                  />
-                </Flex>
-                <Flex align="center" width="100%">
-                  <Text fontWeight="bold" flex="0 0 30%">
-                    Lunch:
-                  </Text>
-                  <Input
-                    value={oneDayMeals.lunch}
-                    onChange={(e) => updateOneDayMeal('lunch', e.target.value)}
-                    placeholder="Enter lunch"
-                    width="100%"
-                    marginLeft={2}
-                  />
-                </Flex>
-                <Flex align="center" width="100%">
-                  <Text fontWeight="bold" flex="0 0 30%">
-                    Dinner:
-                  </Text>
-                  <Input
-                    value={oneDayMeals.dinner}
-                    onChange={(e) => updateOneDayMeal('dinner', e.target.value)}
-                    placeholder="Enter dinner"
-                    width="100%"
-                    marginLeft={2}
-                  />
-                </Flex>
-              </VStack>
-            </TabPanel>
-            <TabPanel>
-              <VStack mt={4} spacing={4} width="100%">
-                {weeklyMeals.map((meal, index) => (
-                  <Box
-                    key={index}
-                    borderWidth="1px"
-                    borderRadius="md"
-                    p={4}
-                    width="100%"
-                    maxW="400px"
-                  >
-                    <Text fontWeight="bold" mb={2}>
-                      Day {index + 1}:
-                    </Text>
-                    <Flex align="center" width="100%">
-                      <Text fontWeight="bold" flex="0 0 30%">
-                        Breakfast:
-                      </Text>
-                      <Input
-                        value={meal.breakfast}
-                        onChange={(e) => updateWeeklyMeal(index, 'breakfast', e.target.value)}
-                        placeholder="Enter breakfast"
-                        width="100%"
-                        marginLeft={2}
-                      />
-                    </Flex>
-                    <Flex align="center" mt={2} width="100%">
-                      <Text fontWeight="bold" flex="0 0 30%">
-                        Lunch:
-                      </Text>
-                      <Input
-                        value={meal.lunch}
-                        onChange={(e) => updateWeeklyMeal(index, 'lunch', e.target.value)}
-                        placeholder="Enter lunch"
-                        width="100%"
-                        marginLeft={2}
-                      />
-                    </Flex>
-                    <Flex align="center" mt={2} width="100%">
-                      <Text fontWeight="bold" flex="0 0 30%">
-                        Dinner:
-                      </Text>
-                      <Input
-                        value={meal.dinner}
-                        onChange={(e) => updateWeeklyMeal(index, 'dinner', e.target.value)}
-                        placeholder="Enter dinner"
-                        width="100%"
-                        marginLeft={2}
-                      />
-                    </Flex>
-                    <IconButton
-                      icon={<CloseButton />}
-                      onClick={() => removeMeal(index)}
-                      aria-label="Remove Meal"
-                      alignSelf="flex-end"
-                      mt={2}
-                    />
-                  </Box>
-                ))}
-                <Button
-                  leftIcon={<AddIcon />}
-                  colorScheme="teal"
-                  variant="outline"
-                  onClick={addMeal}
-                >
-                  Add Meal
-                </Button>
-              </VStack>
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
-        {weeklyMeals.length > 0 && (
-          <Box mt={4} width="100%" maxW="400px">
-            <Text fontWeight="bold" mb={2}>
-              Meal Plan:
-            </Text>
-            <VStack mt={2} align="start" spacing={2} width="100%">
-              {weeklyMeals.map((meal, index) => (
-                <Box key={index} borderWidth="1px" borderRadius="md" p={2} width="100%">
-                  <Text fontWeight="bold">Day {index + 1}:</Text>
-                  <Text>Breakfast: {meal.breakfast}</Text>
-                  <Text>Lunch: {meal.lunch}</Text>
-                  <Text>Dinner: {meal.dinner}</Text>
-                </Box>
-              ))}
-            </VStack>
-          </Box>
-        )}
-      </Flex>
+      <Heading mb={4}>Personal Diet Planner</Heading>
+      <form onSubmit={handleAddMealPlan}>
+        <VStack spacing={4} align="start">
+          <FormControl>
+            <FormLabel>Breakfast</FormLabel>
+            <Input
+              name="breakfast"
+              value={formData.breakfast}
+              onChange={handleInputChange}
+              required
+            />
+          </FormControl>
+          <FormControl>
+            <FormLabel>Lunch</FormLabel>
+            <Input
+              name="lunch"
+              value={formData.lunch}
+              onChange={handleInputChange}
+              required
+            />
+          </FormControl>
+          <FormControl>
+            <FormLabel>Dinner</FormLabel>
+            <Input
+              name="dinner"
+              value={formData.dinner}
+              onChange={handleInputChange}
+              required
+            />
+          </FormControl>
+          <FormControl>
+            <FormLabel>Extras</FormLabel>
+            <Input
+              name="extras"
+              value={formData.extras}
+              onChange={handleInputChange}
+              required
+            />
+          </FormControl>
+          <Button type="submit" colorScheme="teal">
+            Add Meal Plan
+          </Button>
+          <Button colorScheme="gray" onClick={handleViewHistory} mt={4}>
+            View History
+          </Button>
+          <Button colorScheme="teal" onClick={handleViewTodayMeal} mt={4}>
+            View Today's Meal
+          </Button>
+        </VStack>
+      </form>
+      <ToastContainer position="top-center" autoClose={3000} />
     </Box>
   );
-}
+};
 
-function App() {
-  return (
-    <ChakraProvider>
-      <MealPlanner />
-    </ChakraProvider>
-  );
-}
-
-export default App;
+export default PersonalDietPlanner;

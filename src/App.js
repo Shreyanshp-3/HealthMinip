@@ -27,12 +27,14 @@ import DietPlanner from './Components/Food_Library/Pages/DietPlanner';
 import DietPlanGenerator from './Components/Food_Library/Pages/DietPlanGenerator';
 import RecipeSearch from './Components/Food_Library/Pages/RecipeSearch';
 import CalorieTracker from './Components/Food_Library/Pages/CalorieTracker';
+import Getcalorie from './Components/Food_Library/Pages/Getcalorie';
 
 
 
 // next pages
 import SymptomPrediction from './Components/SymptomPrediction/SymptomPrediction';
 import SymptomNav from './Components/SymptomPrediction/SymptomNav';
+import Signup from './Components/Signuppage/Signup';
 
 
 
@@ -41,6 +43,7 @@ function App() {
         <>
             {/* this is the fixed navbar */}
             <Navbar />
+            {/* <Navbar /> */}
             <div className='routes1'>
 
                 <Grid templateColumns="repeat(6,1fr)" bg="white">
@@ -74,9 +77,10 @@ function App() {
                             <Route exact path='/FoodLibrary/DietPlanGenerator' element={<Food_Nav />} />
                             <Route exact path='/FoodLibrary/RecipeSearch' element={<Food_Nav />} />
                             <Route exact path='/FoodLibrary/CalorieTracker' element={<Food_Nav />} />
+                            <Route exact path='/FoodLibrary/GetCalories' element={<Food_Nav />} />
 
                             {/* routes to the pages inside the symptom */}
-                            <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomNav/>} />
+                            <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomNav />} />
 
                         </Routes>
                     </GridItem>
@@ -108,10 +112,12 @@ function App() {
                             <Route exact path='/FoodLibrary/DietPlanGenerator' element={<DietPlanGenerator />} />
                             <Route exact path='/FoodLibrary/RecipeSearch' element={<RecipeSearch />} />
                             <Route exact path='/FoodLibrary/CalorieTracker' element={<CalorieTracker />} />
+                            <Route exact path='/FoodLibrary/GetCalories' element={<Getcalorie />} />
 
 
                             {/* routes to the pages inside the symptoms prediction pages */}
                             <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomPrediction />} />
+                            <Route exact path='/Components/Signuppage' element={<Signup />} />
 
 
 

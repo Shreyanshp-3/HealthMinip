@@ -3,8 +3,26 @@ import { React, useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+
+import { useDisclosure } from '@chakra-ui/react'
+import l1 from './images/l1.jpg';
+import l2 from './images/l2.jpeg';
+import l3 from './images/l3.jpg';
+import l4 from './images/l4.jpeg';
+
 
 const LowDiet = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -63,7 +81,7 @@ const LowDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={l1}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -71,10 +89,10 @@ const LowDiet = () => {
                 <Heading size='md'>Starting Low-Carb Diet : 5 Steps for Success</Heading>
                 <Text>
                   Whether you are starting a low carb diet for weight loss or blood sugar level. Follow these 5 steps to maximize your success.                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More !
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+              
               </Stack>
             </CardBody>
 
@@ -97,18 +115,18 @@ const LowDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={l2}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
               <Stack mt='6' spacing='3'>
                 <Heading size='md'>10 Staples to turn your pantry healthy source for a low carb lifestyle</Heading>
                 <Text>
-                  You won't regret putting these tasty Staples in your shopping cart                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                  You won't regret putting these tasty Staples in your shopping cart. </Text>
+                  <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+              
               </Stack>
             </CardBody>
 
@@ -131,7 +149,7 @@ const LowDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={l3}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -139,10 +157,10 @@ const LowDiet = () => {
                 <Heading size='md'>Low Carb Food Grade</Heading>
                 <Text>
                   Need help finding healthy low carb foods? This might help you !                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                  <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+              
               </Stack>
             </CardBody>
 
@@ -165,7 +183,7 @@ const LowDiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={l4}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -173,10 +191,10 @@ const LowDiet = () => {
                 <Heading size='md'>Are you missing out on these important vitamins and minerals if you are following a low carb diet</Heading>
                 <Text>
                   Learn how to customize you targets and track more than 50000 nutrients with My fitness .                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                  <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+               
               </Stack>
             </CardBody>
 

@@ -2,8 +2,26 @@ import { Box, Button, Card, CardBody, Grid, GridItem, Heading, Image, Stack, Tex
 import { React, useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
 
+import { useDisclosure } from '@chakra-ui/react'
+import lf1 from './images/lf1.jpg';
+import lf2 from './images/lf2.jpeg';
+import lf3 from './images/lf3.jpeg';
+import lf4 from './images/lf4.jpeg';
+import lf5 from './images/lf5.jpeg';
+import lf6 from './images/lf6.jpeg';
 const LowFatdiet = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -63,7 +81,7 @@ const LowFatdiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={lf1}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -72,10 +90,10 @@ const LowFatdiet = () => {
                 <Text>
                   Whether you are following a low fat diet for weight loss, My health diary is here to help you...
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More !
-                </Button>
+                              <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+               
               </Stack>
             </CardBody>
 
@@ -98,7 +116,7 @@ const LowFatdiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={lf2}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -107,10 +125,8 @@ const LowFatdiet = () => {
                 <Text>
                   Learn about the different types of fats and how to make healthier food choices.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
               </Stack>
             </CardBody>
 
@@ -133,7 +149,7 @@ const LowFatdiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={lf3}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -142,10 +158,10 @@ const LowFatdiet = () => {
                 <Text>
                   Try this fool proof method for limiting extra fats and calories.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+               
               </Stack>
             </CardBody>
 
@@ -168,7 +184,7 @@ const LowFatdiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={lf4}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -176,10 +192,10 @@ const LowFatdiet = () => {
                 <Heading size='md'>Want to cook without oil? How to ditch the oil for every cooking method</Heading>
                 <Text>
                   Believe or not, its not hard to cook without oil.Here are out best tips and tricks                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                  <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+              
               </Stack>
             </CardBody>
 
@@ -202,7 +218,7 @@ const LowFatdiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={lf5}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -211,10 +227,10 @@ const LowFatdiet = () => {
                 <Text>
                   Try these tips for cooking with herbs and spices.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+              
               </Stack>
             </CardBody>
 
@@ -237,7 +253,7 @@ const LowFatdiet = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={lf6}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -246,10 +262,9 @@ const LowFatdiet = () => {
                 <Text>
                   Set up your kitchen for success!
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
               </Stack>
             </CardBody>
 

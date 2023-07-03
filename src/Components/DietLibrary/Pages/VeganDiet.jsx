@@ -2,8 +2,24 @@ import { Box, Button, Card, CardBody, Grid, GridItem, Heading, Image, Stack, Tex
 import { React, useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+  } from '@chakra-ui/react'
+  
+  import { useDisclosure } from '@chakra-ui/react'
+import v1 from './images/v1.jpeg';
+import v2 from './images/v2.jpeg';
+import v3 from './images/v3.jpeg';
+import v4 from './images/v4.jpeg';
 const VeganDiet = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -63,7 +79,7 @@ const VeganDiet = () => {
                     >
                         <CardBody>
                             <Image
-                                src=""
+                                src={v1}
                                 alt='Green double couch with wooden legs'
                                 borderRadius='lg'
                             />
@@ -72,10 +88,10 @@ const VeganDiet = () => {
                                 <Text>
                                     It is essential to have a roadmap for a healthy and balanced vegan plan.
                                 </Text>
-                                <Button size='md' colorScheme='purple' mt='24px'
-                                >
-                                    Read More !
-                                </Button>
+                                <Button onClick={onOpen}
+                                    colorScheme='purple'>Read More !</Button>
+
+                             
                             </Stack>
                         </CardBody>
 
@@ -98,7 +114,7 @@ const VeganDiet = () => {
                     >
                         <CardBody>
                             <Image
-                                src=""
+                                src={v2}
                                 alt='Green double couch with wooden legs'
                                 borderRadius='lg'
                             />
@@ -107,10 +123,9 @@ const VeganDiet = () => {
                                 <Text>
                                     Thinking about a vegan diet? Here are the six most important nutrients for vegan and the supplements you might need .
                                 </Text>
-                                <Button size='md' colorScheme='purple' mt='24px'
-                                >
-                                    Read More!
-                                </Button>
+                                <Button onClick={onOpen}
+                                    colorScheme='purple'>Read More !</Button>
+
                             </Stack>
                         </CardBody>
 
@@ -133,7 +148,7 @@ const VeganDiet = () => {
                     >
                         <CardBody>
                             <Image
-                                src=""
+                                src={v3}
                                 alt='Green double couch with wooden legs'
                                 borderRadius='lg'
                             />
@@ -142,10 +157,9 @@ const VeganDiet = () => {
                                 <Text>
                                     Here are our favorite plant based proof sources that will fill and fuel you.
                                 </Text>
-                                <Button size='md' colorScheme='purple' mt='24px'
-                                >
-                                    Read More!
-                                </Button>
+                                <Button onClick={onOpen}
+                                    colorScheme='purple'>Read More !</Button>
+
                             </Stack>
                         </CardBody>
 
@@ -168,7 +182,7 @@ const VeganDiet = () => {
                     >
                         <CardBody>
                             <Image
-                                src=""
+                                src={v4}
                                 alt='Green double couch with wooden legs'
                                 borderRadius='lg'
                             />
@@ -178,10 +192,9 @@ const VeganDiet = () => {
                                     Tofu is versatile, nutritious and adapts well to many different kind of recipes.
 
                                 </Text>
-                                <Button size='md' colorScheme='purple' mt='24px'
-                                >
-                                    Read More!
-                                </Button>
+                                <Button onClick={onOpen}
+                                    colorScheme='purple'>Read More !</Button>
+
                             </Stack>
                         </CardBody>
 

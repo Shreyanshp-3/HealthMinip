@@ -17,7 +17,10 @@ import {
   useDisclosure,
   Link,
   Fade,
+  useToast,
 } from "@chakra-ui/react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RecipeSearch = () => {
   const [searchInputTxt, setSearchInputTxt] = useState("");
@@ -25,6 +28,7 @@ const RecipeSearch = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const modalBodyRef = useRef(null);
+  const toast = useToast();
 
   const handleSearch = async () => {
     try {
@@ -32,7 +36,27 @@ const RecipeSearch = () => {
         `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`
       );
       const data = await response.json();
-      setSearchResults(data.meals);
+
+      if (data.meals) {
+        setSearchResults(data.meals);
+      }
+      else {
+        setSearchResults([]);
+        toast({
+          title: "Results Not Found",
+          description: "Please check your spelling or try again later.",
+          colorScheme: "purple",
+          duration: 3000,
+          isClosable: true,
+          size: "lg",
+          position: "top",
+          variant: "subtle",
+          style: {
+            fontSize: "2rem", // Increase the font size
+            padding: "2rem", // Increase the padding
+          },
+        });
+      }
     } catch (error) {
       console.log(error);
     }

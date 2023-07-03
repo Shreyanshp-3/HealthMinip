@@ -72,12 +72,22 @@ const Food_Nav = () => {
         </ListItem>
         <ListItem
           pb={{ base: "1rem", md: "1rem", xl: "1rem" }}
-          // data-aos="fade-right"
+        // data-aos="fade-right"
 
         >
           <NavLink to="/FoodLibrary/CalorieTracker">
             <ListIcon as={CloseIcon} color="white" />
             Calorie Tracker
+          </NavLink>
+        </ListItem>
+        <ListItem
+          pb={{ base: "1rem", md: "1rem", xl: "1rem" }}
+        // data-aos="fade-right"
+
+        >
+          <NavLink to="/FoodLibrary/GetCalories">
+            <ListIcon as={CloseIcon} color="white" />
+            Get Calories
           </NavLink>
         </ListItem>
 

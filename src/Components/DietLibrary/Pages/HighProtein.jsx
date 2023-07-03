@@ -1,7 +1,25 @@
 import { Box, Button, Card, CardBody, Grid, GridItem, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import { React, useEffect } from 'react'
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+
+import { useDisclosure } from '@chakra-ui/react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import hp1 from './images/hp1.jpg';
+import hp2 from './images/hp2.jpeg';
+import hp3 from './images/hp3.jpeg';
+import hp4 from './images/hp4.jpeg';
+import hp5 from './images/hp5.jpeg';
+import hp6 from './images/hp6.jpeg';
+
 
 const HighProtein = () => {
   useEffect(() => {
@@ -11,6 +29,7 @@ const HighProtein = () => {
       once: false
     })
   }, [])
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <Grid templateColumns="repeat(6,1fr)" bg="white">
@@ -62,7 +81,7 @@ const HighProtein = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={hp1}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -70,10 +89,13 @@ const HighProtein = () => {
                 <Heading size='md'>If you are starting a help protein eating plan check out these 5 steps for success!</Heading>
                 <Text>
                   Whether you are starting a heigh-protein eating plan for weight loss or to build a muscle mass,My health diary is here to help you.                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
+                {/* <Button size='md' colorScheme='purple' mt='24px'
                 >
                   Read More !
-                </Button>
+                </Button> */}
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More!</Button>
+
               </Stack>
             </CardBody>
 
@@ -96,7 +118,7 @@ const HighProtein = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={hp2}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -105,10 +127,10 @@ const HighProtein = () => {
                 <Text>
                   Learn about the types of protein powder and How to use them.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+
               </Stack>
             </CardBody>
 
@@ -131,7 +153,7 @@ const HighProtein = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={hp3}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -140,10 +162,10 @@ const HighProtein = () => {
                 <Text>
                   Here's what one study found.
                 </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+
               </Stack>
             </CardBody>
 
@@ -166,7 +188,7 @@ const HighProtein = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={hp4}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -174,10 +196,11 @@ const HighProtein = () => {
                 <Heading size='md'>The benefits of eating protein</Heading>
                 <Text>
                   Learn about animal and plant based sources and how to make smart choices between them .                       </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+
+
               </Stack>
             </CardBody>
 
@@ -200,7 +223,7 @@ const HighProtein = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={hp5}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -208,10 +231,11 @@ const HighProtein = () => {
                 <Heading size='md'>Meet your protein needs or muscle gain</Heading>
                 <Text>
                   5 tips from a sports nutritionist for building and maintaining muscle.                </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+
+
               </Stack>
             </CardBody>
 
@@ -234,7 +258,7 @@ const HighProtein = () => {
           >
             <CardBody>
               <Image
-                src=""
+                src={hp6}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
               />
@@ -242,11 +266,12 @@ const HighProtein = () => {
                 <Heading size='md'>5 Ingredients or less high protein snack ideas for weight loss</Heading>
                 <Text>
                   Be a smart snacker with these tasty ideas.
-                                  </Text>
-                <Button size='md' colorScheme='purple' mt='24px'
-                >
-                  Read More!
-                </Button>
+                </Text>
+                <Button onClick={onOpen}
+                  colorScheme='purple'>Read More !</Button>
+
+
+
               </Stack>
             </CardBody>
 
