@@ -37,6 +37,8 @@ import SymptomNav from './Components/SymptomPrediction/SymptomNav';
 import Signup from './Components/Signuppage/Signup';
 import ExerciseLibrary from './Components/ExerciseLibrary/ExerciseLibrary';
 import ExerciseNav from './Components/ExerciseLibrary/ExerciseNav';
+import Feedback from './Components/Feedback/Feedback';
+import FeedbackNav from './Components/Feedback/FeedbackNav';
 
 
 
@@ -83,10 +85,12 @@ function App() {
 
                             {/* routes to the pages inside the symptom */}
                             <Route exact path='/SymptomPrediction/SymptomPrediction' element={<SymptomNav />} />
-                            <Route exact path='/ExerciseLibrary/ExerciseLibrary' element={<ExerciseNav />} />
 
                             {/* that exercise page */}
+                            <Route exact path='/ExerciseLibrary/ExerciseLibrary' element={<ExerciseNav />} />
 
+                            {/* the feedback form */}
+                            <Route exact path='/Feedback/Feedback' element={<FeedbackNav />} />
                         </Routes>
                     </GridItem>
 
@@ -125,9 +129,10 @@ function App() {
                             <Route exact path='/Components/Signuppage' element={<Signup />} />
 
                             {/* that exercise page */}
-
                             <Route exact path='/ExerciseLibrary/ExerciseLibrary' element={<ExerciseLibrary />} />
 
+                            {/* the feedback form */}
+                            <Route exact path='/Feedback/Feedback' element={<Feedback />} />
 
                         </Routes>
                     </GridItem>

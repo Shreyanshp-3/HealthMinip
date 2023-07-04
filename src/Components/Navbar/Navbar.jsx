@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, Stack ,Image  } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "./crown.svg";
+import Logo from "./new2logo.png";
 
 const NavBar = (props) => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -10,7 +10,14 @@ const NavBar = (props) => {
 
     return (
         <NavBarContainer {...props}>
-            <Logo />
+            <Image
+                src={Logo}
+                alt="Image description"
+                width="13rem"
+                height="5rem"
+                // boxSize="rem"
+                // viewBox="0 0 20 20"
+            />
             <MenuToggle toggle={toggle} isOpen={isOpen} />
             <MenuLinks isOpen={isOpen} />
         </NavBarContainer>
@@ -78,6 +85,7 @@ const MenuLinks = ({ isOpen }) => {
 
                 <Link className="nav-link" to="/ExerciseLibrary/ExerciseLibrary">Exercise</Link>
                 <Link className="nav-link" to="/SymptomPrediction/SymptomPrediction">Symptom Prediction</Link>
+                <Link className="nav-link" to="/Feedback/Feedback">Feedback</Link>
 
                 <MenuItem to="/" text-size="1.3rem" isLast>
                     <Button
@@ -89,7 +97,7 @@ const MenuLinks = ({ isOpen }) => {
                             bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
                         }}
                     >
-                <Link className="nav-link" to="/Components/Signuppage">Sign in</Link>
+                        <Link className="nav-link" to="/Components/Signuppage">Sign in</Link>
                     </Button>
                 </MenuItem>
             </Stack>

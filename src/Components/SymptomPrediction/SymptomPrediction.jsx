@@ -11,10 +11,19 @@ const symptoms = [
   { id: 7, name: "Cough" },
   { id: 8, name: "Diarrhea" },
   { id: 9, name: "Ear Problems" },
-  { id: 10, name: "" },
-  { id: 11, name: "" },
-  { id: 12, name: "" },
-  { id: 13, name: "" },
+  { id: 10, name: "Elimination Problem or Consitpation" },
+  { id: 11, name: "Eye Problem" },
+  { id: 12, name: "Face Swelling" },
+  { id: 13, name: "Fever" },
+  { id: 14, name: "Foot Problems" },
+  { id: 15, name: "Hair Loss" },
+  { id: 16, name: "Arm Problems" },
+  { id: 17, name: "Headaches" },
+  { id: 18, name: "Hip Problems" },
+  { id: 19, name: "" },
+  { id: 20, name: "" },
+  { id: 21, name: "" },
+  { id: 22, name: "" },
 
   // Add more symptoms as needed
 ];
@@ -36,15 +45,35 @@ const diseasesData = {
 
   "Diarrhea": ["Are you also nauseated or vomiting?", "Did you recently start taking an antibiotic or other new over-the-counter or prescribed medicine or supplement?", "Did your symptoms begin 30 minutes to 2 hours after eating or drinking dairy products?", "Did your diarrhea develop within 2-8 hours after eating food", "Have you traveled recently to another country?", "Do you have sharp pain in the lower left side of your abdomen, and are you often constipated?", "Is your diarrhea watery, and do you have a headache or muscle aches and a low fever?", "Do you have persistent, severe abdominal cramps, gas, and watery diarrhea followed by greasy stools?", "Do you have a fever, and are you experiencing pain in the middle or upper abdomen that radiates to your back?", "Are you bloated, and are you experiencing severe lower abdominal pain or cramping?", "Do you have diarrhea along with gas, bloating, and stomach pains every time you eat certain foods?"],
 
-  "Ear Problems": ["Are you experiencing pain deep in the ear", "Do you have redness and swelling of the outer ear and the surrounding skin?", "Do you have headache-type pain and redness behind your ear","Do you have thick pus-filled (white) or bloody drainage from the ear canal that started after a sharp, sudden pain?","Is your ear swollen, and does it itch or hurt when you pull on your ear or earlobe?","Do you have swelling or thickening of one or more ears after wrestling or doing another contact sport or fighting event","Is fullness of the ear present on one or both sides without any other symptoms? Does the person have a history of ear wax production?","Can you see or feel a “pimple” in the ear canal?"],
+  "Ear Problems": ["Are you experiencing pain deep in the ear", "Do you have redness and swelling of the outer ear and the surrounding skin?", "Do you have headache-type pain and redness behind your ear", "Do you have thick pus-filled (white) or bloody drainage from the ear canal that started after a sharp, sudden pain?", "Is your ear swollen, and does it itch or hurt when you pull on your ear or earlobe?", "Do you have swelling or thickening of one or more ears after wrestling or doing another contact sport or fighting event", "Is fullness of the ear present on one or both sides without any other symptoms? Does the person have a history of ear wax production?", "Can you see or feel a “pimple” in the ear canal?"],
+
+  "Elimination Problem or Consitpation": ["Is the affected person an infant (under 1 year) or a child?", "Do you have pain or discomfort with your bowel movements?", "Do you have blood on, or mucous in, your bowel movements?", "Do you have to strain when you have a bowel movement", "Do you have a fever, chills, and intense pain near the anus even when you’re not having a bowel movement?", "Is there itching when you have a bowel movement?", "Do you have a small reddish mass of tissue sticking out of your anus?", "Is there occasional bright red blood in your stools, and do you have 1 or more small lumps near the rectum?", "Do you have itching around your rectum even when you’re not having a bowel movement?", "Are your bowel movements gray or whitish?", "Do you have problems moving your bowels without a laxative or enema?"],
+
+  "Eye Problem": ["Do you have blurred vision?", "Have you recently injured your eye?", "Is your eye red, and do you have severe eye pain, or has your vision suddenly decreased or become cloudy?", "Are you experiencing flu-like symptoms, such as fever, fatigue, muscle aches, and pain in one or both temples?", "Do you have thick nasal drainage and pain or pressure on your forehead and behind your eyes?", "Are your eyes red or sensitive to light, are you experiencing eye pain, and do you see dark, floating spots?", "Do you have diabetes, and have you noticed any changes in your vision?", "Are your eyes red, itchy, or swollen, or is there a bite-like swelling on one of your eyelids?", "Do you have a fever, and is your eyelid swollen, red, and/or tender to the touch?", "Is there a firm, painful lump in the eyelid or a tender ‘pimple’ on the edge of the eyelid?", "Is your eye red, is your vision blurry, and do you feel like you have sand in your eye (foreign body sensation)?", "Is the white of the eye pink, red, or irritated, and is there any secretion or mucus coming from the eye?", "Do you wear contact lenses, and do you have eye pain?"],
+
+  "Face Swelling": ["Do you have a painless, soft to firm lump on your head, face, or neck? Do you see a pore or small hole at the top of the bump?", "Are your lips and eyes swollen and do you have a rash that looks like mosquito bites?", "Do you have a painful pink or red bump, or a group of smaller bumps on your forehead or face?", "Do you have red, flaky, oily areas near the edges of your scalp, in the side folds of your nose, or on your cheeks?", "Do you have painful swelling near one or both ears, and do you have fever along with pain when chewing or swallowing?", "Do you have reddish, raised, excessive tissue that seems to be growing around the area of a scar or piercing?"],
+
+  "Fever": ["Does your fever come and go and does your temperature stay between 97° and 102°F?", "Have you had a fever for weeks, along with tiredness and a sore throat?", "Do you have a fever between 101°F and 103°F?", "Do you have a sore throat and headache, but no cough?", "Do you have a sore throat, a dry cough, tiredness, mild headaches, or muscle aches?", "Do you have aches, chills, nausea, vomiting, cramps, or watery diarrhea?", "Are you short of breath and do you have a cough that produces red, yellow, green, or tan mucus?", "Have you lost weight unintentionally, and do you have a fever that comes and goes, night sweats (drenching your bed sheets or bedclothes), or swollen lymph nodes?", "Do you have stomach pain, nausea, and/or vomiting?", "Do you have a rash that’s red, tender and warm, or a red streak on your arm or leg?", "Do you have an earache?", "Have you been outside under high temperatures and are you feeling nauseous or faint?", "Have you recently started taking a new medicine?", "Is your temperature consistently above 103°?", "Are you short of breath or are you coughing up mucus or blood?", "Are you experiencing pain or burning when you urinate, or do you have back or abdominal pain, along with nausea/vomiting?", "Do you have a severe headache, neck stiffness, drowsiness, and vomiting, and are your eyes sensitive to light or are your ears sensitive to sound?", "Have you been outside in extremely hot weather, and are you hot but not sweating, possibly feeling faint or having some confusion?"],
 
 
-  "Symptom 3": ["Disease G", "Disease H", "Disease I"],
-  "Symptom 3": ["Disease G", "Disease H", "Disease I"],
-  "Symptom 3": ["Disease G", "Disease H", "Disease I"],
-  "Symptom 3": ["Disease G", "Disease H", "Disease I"],
-  "Symptom 3": ["Disease G", "Disease H", "Disease I"],
-  "Symptom 3": ["Disease G", "Disease H", "Disease I"],
+  "Foot Problems": ["Is the person a child or a newborn with a foot deformity?", "Is the person a child or a toddler with toes that point in?", "Did your foot pain begin after intense physical activity, or has the pain slowly worsened over an extended period of time?", "Did your foot pain or swelling begin with an injury or accident?", "Is there swelling or redness on top of your foot?", "Are you unable to stand or walk on your foot and is your foot swollen or bruised?", "Is there pain on the bottom of your foot between the ball and the heel?", "Is the pain only in one toe and did it start after you hit, twisted, or jammed the toe?", "Is the pain only in one toe and did it start after you hit, twisted, or jammed the toe?", "Do you have a fever and are your joints tender, sore, red, or swollen?", "Do you have a red, swollen big toe that hurts when anything touches it?", "Do you have intense pain near your heel when you put weight on it?", "Do you have a moist, white, or red area of peeling skin and itching between your toes, and/or scaling and itching skin on your foot, often in a “moccasin distribution”?", "Have your toes or feet been exposed to very cold temperatures?"],
+
+  "Hair Loss": ["Is your hair falling out in small patches? Are these patches red, itchy, or oily?", "Are you a man who has gradually lost hair in the front or on the top of your head and has relatives with similar hair loss?", "Have you used any chemicals on your hair, or have you worn tight braids or cornrows recently?", "Are you taking any new medicines, or are you being treated for cancer?", "Have you been weak, tired, or anxious?", "Are you a woman who is older than 50, or have you given birth within the last three months?", "Do you have a completely smooth patch where you lost hair with no broken or smaller hairs noted in the area?", "Have you lost all of the hair all over your scalp? Or have you lost all of your hair all over your entire body? This would include eyebrows, genitals, armpits, face, etc.?"],
+
+  "Arm Problems": ["Is the affected area deformed or swollen?", "Does the pain get worse when you move your arm, hand, or wrist?", "Does the pain get worse with repetitive movement (e.g., while working or playing a sport)?”", "Is it painful to grip a doorknob, and does the pain start on the outside of your elbow and move down your arm to your wrist?", "Do you have numbness or pain in your fingers, hand, wrist, or arm, especially when you flex your wrist (i.e., bend your palm toward your forearm)?", "Do you have a firm lump or swelling near your wrist or finger joints?", "Are one or more joints swollen and tender? Do you have a fever?", "Does your thumb hurt with gripping, typing, or writing with a pencil or pen?"],
+
+
+  "Headaches": ["Do you have a fever, cold symptoms, nausea, vomiting, or diarrhea?", "Do you have a severe headache, stiff neck, vomiting, and does normal light hurt your eyes, or do normal sounds hurt your ears?", "Have you injured your head or been knocked out recently?", "Do you have numbness, tingling, or weakness in the arms and legs, or do you have trouble speaking or understanding speech?", "Do you have pressure around your eyes, or do you have congestion with yellowish-green nasal discharge and a fever?", "Do you have mild to moderate pressure or tightening around your temples, and does the pain occur during times of stress or after you have been sitting in one position for a long time?", "Do you have intense throbbing pain on one side of your head or temple, often with associated nausea or vomiting, and do see flashing lights or spots before the headache?", "Do your headaches occur after you read, watch TV, or use a computer?", "Do you get headaches and feel shaky and weak if you miss a meal?", "Are you trying to cut down on caffeine, alcohol, or some other drug?", "Do you have headaches that occur daily for several days, and do you also have eye discharge and runny nose from the same side as the headache?"],
+
+
+  "Hip Problems": ["Do the toes on your leg on the side of your injured hip seem to turn out, and does it hurt to straighten, lift, or stand on your leg?", "Do you have stiffness, swelling, redness, or pain in any other joints?", "Have you felt a “click” in your hip or occasional pain with activity?","Do you have pain in the back of your hip that starts in your lower back and travels into your buttocks or into your leg?","Is the person a child with pain in the knees, hips, or groin?","Do you have pain in your hip that is also on the outside (lateral) part of your knee?"],
+
+
+
+  "Symptom 3": ["", "", ""],
+  "Symptom 3": ["", "", ""],
+  "Symptom 3": ["", "", ""],
+  "Symptom 3": ["", "", ""],
   // Add more symptom-disease mappings as needed
 };
 
@@ -350,13 +379,420 @@ const treatmentData = {
     heading: "A small INFECTION or LOCAL INFLAMMATION in the ear canal may be the cause.",
     content: "The infection/inflammation will probably go away by itself in 2 to 5 days. A mild pain reliever and warm compress may help relieve the pain. See your doctor if the pain becomes severe or if redness and warmth spread into or around the ear or if you develop fever.",
   },
-  "": {
-    heading: "Treatment for Disease I",
-    content: "Treatment for Disease I",
+
+
+  // elimination problem or constipation
+  "Is the affected person an infant (under 1 year) or a child?": {
+    heading: "Check out for the Food Given",
+    content: "Treatment Go counsult a Doctor ",
+  },
+  "Do you have pain or discomfort with your bowel movements?": {
+    heading: "The blood may be from internal HEMORRHOIDS. Internal HEMORRHOIDS usually don’t cause any discomfort. RECTAL CANCER is another possibility, especially if you’re over 40 years. Other signs of RECTAL CANCER may include changes in the shape of your stools (pencil-like diameter).",
+    content: "See your doctor. HEMORRHOIDS are often treated with over-the-counter creams or suppositories. Soaking in warm water may also help relieve any discomfort. Your doctor will likely consider imaging if he/she is concerned about CANCER.",
+  },
+  "Do you have blood on, or mucous in, your bowel movements?": {
+    heading: "The blood may be from internal HEMORRHOIDS. Internal HEMORRHOIDS usually don’t cause any discomfort. RECTAL CANCER is another possibility, especially if you’re over 40 years. Other signs of RECTAL CANCER may include changes in the shape of your stools (pencil-like diameter).",
+    content: "See your doctor. HEMORRHOIDS are often treated with over-the-counter creams or suppositories. Soaking in warm water may also help relieve any discomfort. Your doctor will likely consider imaging if he/she is concerned about CANCER.",
+  },
+  "Do you have to strain when you have a bowel movement": {
+    heading: "CONSTIPATION can cause these symptoms.",
+    content: "Add more fiber to your diet, and drink lots of water. Over-the-counter bulk-forming laxatives may also help relieve constipation. Check the side effect lists on any medicines you are taking to see if they could be causing CONSTIPATION.",
+  },
+  "Do you have a fever, chills, and intense pain near the anus even when you’re not having a bowel movement?": {
+    heading: "You may have HEMORRHOIDS.",
+    content: "See your doctor, especially if you notice blood in your stool or in the toilet bowl after bowel movements. You can also consider over-the-counter hemorrhoid wipes or creams.",
+  },
+  "Is there itching when you have a bowel movement?": {
+    heading: "You may have HEMORRHOIDS.",
+    content: "See your doctor, especially if you notice blood in your stool or in the toilet bowl after bowel movements. You can also consider over-the-counter hemorrhoid wipes or creams.",
+  },
+  "Do you have a small reddish mass of tissue sticking out of your anus?": {
+    heading: "You may have a RECTAL PROLAPSE. People who have this condition may feel like they can’t completely empty their bowels. They may also pass very small stools or be unable to control their bowel movements.",
+    content: "See your doctor.",
+  },
+  "Is there occasional bright red blood in your stools, and do you have 1 or more small lumps near the rectum?": {
+    heading: "You may have HEMORRHOIDS. If the lump is painful to the touch or throbbing in nature, it may be a THROMBOSED HEMORRHOID.",
+    content: "For general HEMORRHOIDS use an over-the-counter hemorrhoidal cream or suppository and soaking the area in warm water may help relieve the pain and itching. If there’s no improvement in 1 to 2 weeks, or if the bleeding continues, see your doctor.For THROMBOSED HEMORRHOID, if you have acute pain that won’t stop, see your doctor or go to the emergency room.",
+  },
+  "Do you have itching around your rectum even when you’re not having a bowel movement?": {
+    heading: "Rectal itching may be a sign of a YEAST INFECTION, ALLERGY to specific products in toilet paper, or PINWORMS (especially if itching is only present in the morning).",
+    content: "Nonprescription, antifungal medications are for a YEAST INFECTION and antiparasitic medications are for PINWORMS. If you think an allergy is your problem, try using white, unscented toilet paper. See your doctor if your symptoms don’t improve.",
+  },
+  "Are your bowel movements gray or whitish?": {
+    heading: "You may have a BLOCKAGE in or near your gallbladder, or you may have LIVER DISEASE or an infection like HEPATITIS.",
+    content: "See your doctor right away.",
+  },
+  "Do you have problems moving your bowels without a laxative or enema?": {
+    heading: "CONSTIPATION, along with overuse of laxatives can cause dependence on them.",
+    content: "Avoid using laxatives. Instead, try adding more fiber to your diet, and drink lots of water. Keep in mind that it isn’t necessary to have a bowel movement every day. A normal range is 3 times a day to 2 times a week.",
+  },
+
+
+  //eye problem releated questions 
+  "Do you have blurred vision?": {
+    heading: "You may have blurred vision",
+    content: "Visit a Doctor and Do a check of your vision",
+  },
+  "Have you recently injured your eye?": {
+    heading: "You may have a serious and urgent problem, such as a DETACHED RETINA.",
+    content: "Call your eye doctor right away. Go to the closest emergency room or call an ambulance.",
+  },
+  "Is your eye red, and do you have severe eye pain, or has your vision suddenly decreased or become cloudy?": {
+    heading: "Your symptoms may be from ACUTE GLAUCOMA, a condition caused by a rise in eye pressure that can cause permanent vision damage or blindness.",
+    content: "If you have these symptoms, call your doctor right away or go to the closest emergency room or call an ambulance.",
+  },
+  "Are you experiencing flu-like symptoms, such as fever, fatigue, muscle aches, and pain in one or both temples?": {
+    heading: "Your symptoms may be a sign of a serious inflammatory condition called TEMPORAL ARTERITIS.",
+    content: "See your doctor right away.",
+  },
+  "Do you have thick nasal drainage and pain or pressure on your forehead and behind your eyes?": {
+    heading: "SINUSITIS (a viral or bacterial  infection of the sinuses) may be the cause of your pain.",
+    content: "Take a cold or sinus medicine, and drink plenty of fluids. Warm facial compresses may also help relieve the pain. If your symptoms don’t improve within 10 days, or if you have constant fever or severe pain, or your symptoms improve and then worsen again, see your doctor as soon as possible. Do not give children 5 years and under cough or cold medicines.",
+  },
+  "Are your eyes red or sensitive to light, are you experiencing eye pain, and do you see dark, floating spots?": {
+    heading: "You may have an inflammation inside the eye called IRITIS.",
+    content: "See your doctor or an eye specialist right away.",
+  },
+  "Do you have diabetes, and have you noticed any changes in your vision?": {
+    heading: "Over time, too much glucose (sugar) in the blood can cause eye problems and damage.",
+    content: "Tell your doctor about the vision changes you have experienced. He or she can give you advice on preventing eye problems. You should also make sure that you are getting a dilated eye exam at least once per year.",
+  },
+  "Are your eyes red, itchy, or swollen, or is there a bite-like swelling on one of your eyelids?": {
+    heading: "Your symptoms may be from an ALLERGY or an INSECT BITE.",
+    content: "Use a cool compress and take an antihistamine to relieve discomfort. See your doctor if the swelling doesn’t get better or if you have a fever.",
+  },
+  "Do you have a fever, and is your eyelid swollen, red, and/or tender to the touch?": {
+    heading: "These may be signs of a serious eye infection called PERIORBITAL CELLULITIS.",
+    content: "See your doctor right away.",
+  },
+  "Is there a firm, painful lump in the eyelid or a tender ‘pimple’ on the edge of the eyelid?": {
+    heading: "You may have either a CHALAZION (in the eyelid), HORDEOLUM, or STYE (on the eyelid edge).",
+    content: "A stye usually heals in 5-7 days. To relieve the pain, apply a warm compress to the area for 10-15 minutes, 4 times a day, and take mild pain relievers. Microwaving a potato and wrapping it in a cloth will provide a longer term warm compress. If the bump grows or doesn’t go away, see your doctor. If the redness spreads or swells quickly, or if you develop fever, seek medical attention promptly.",
+  },
+  "Is your eye red, is your vision blurry, and do you feel like you have sand in your eye (foreign body sensation)?": {
+    heading: "This sensation may be from a SCRATCHED CORNEA or from a small particle (foreign body) under the eyelid.",
+    content: "Rinse your eye with clean water or saline solution. You can also flush your eye under the faucet. If the sensation doesn’t go away, see your doctor as soon as possible.",
+  },
+  "Is the white of the eye pink, red, or irritated, and is there any secretion or mucus coming from the eye?": {
+    heading: "CONJUNCTIVITIS (also called PINK EYE) can be caused by an allergy, virus, bacteria, or fungus. If it is one-sided, it is more likely to be bacterial.",
+    content: "BACTERIAL CONJUNCTIVITIS is very contagious, so avoid contact with the eye and wash your hands often. Try over-the-counter eyedrops and apply a warm compress to relieve any discomfort. Remove your contacts and do not wear them until the inflammation has cleared.If there’s no improvement with a warm compress and gently cleaning the secretions in 1-2 days, you may have a more serious form of VIRAL or BACTERIAL CONJUNCTIVITIS. See your doctor promptly.",
+  },
+  "Do you wear contact lenses, and do you have eye pain?": {
+    heading: "You may have an irritation from contact lens overuse or a more serious eye condition, such as an INFECTION, CORNEAL ABRASION, or a scratch caused by your contact lens.",
+    content: "Remove your contact lenses and let your eyes rest for a while. If the redness or irritation doesn’t go away, see your eye care professional.",
+  },
+
+
+
+  // swollen faces 
+  "Do you have a painless, soft to firm lump on your head, face, or neck? Do you see a pore or small hole at the top of the bump?": {
+    heading: "You may have a SEBACEOUS CYST, a collection of oil under the skin. Sebaceous cysts are usually small and grow slowly. Gentle pressure on it may express a thicker/cheesy discharge.",
+    content: "It is common for cysts to discharge as stated above. See your doctor if the cyst becomes tender or inflamed. Your doctor may suggest treating an inflamed cyst with injections, and may also recommend surgery to remove the cyst.",
+  },
+  "Are your lips and eyes swollen and do you have a rash that looks like mosquito bites?": {
+    heading: "Your symptoms may be from an ALLERGIC REACTION or HIVES.",
+    content: "If you have trouble breathing, your throat becomes tight, or the swelling becomes severe, see your doctor or go to the emergency room right away. If you are not having trouble breathing and the swelling is mild, you can take an over-the-counter antihistamine and call your doctor.",
+  },
+  "Do you have a painful pink or red bump, or a group of smaller bumps on your forehead or face?": {
+    heading: "You may have a skin infection, such as BOILS, CARBUNCLES, or ACNE. A BOIL is a large, pus-filled bump. Multiple boils are called CARBUNCLES. ACNE occurs when oil glands start producing more oil and block pores. Acne can result in blackheads or whiteheads (PUSTULES), which are known as pimples.",
+    content: "A warm compress may help BOILS and CARBUNCLES heal faster. See your doctor if you’re in pain or if the infection hasn’t healed in a couple of weeks. If you have ACNE, try using an over-the-counter acne medicine and washing your face 1-2 times per day with a mild soapy cleanser. Avoid picking at the pimples. See your doctor if the problem persists.",
+  },
+  "Do you have red, flaky, oily areas near the edges of your scalp, in the side folds of your nose, or on your cheeks?": {
+    heading: "You may have a skin irritation caused by ACNE, ROSACEA, or SEBORRHEA.",
+    content: "You can use over-the-counter anti-dandruff shampoo, applying it just prior to bathing, and leaving it in for 5 minutes before washing it away. See your doctor if it worsens or does not improve.",
+  },
+  "Do you have painful swelling near one or both ears, and do you have fever along with pain when chewing or swallowing?": {
+    heading: "You may have MUMPS, a contagious viral infection that affects the glands below and in front of the ears, as well as causes enlargement of your spleen (an organ in your abdomen).",
+    content: "The measles, mumps, and rubella  (MMR) vaccine prevent MUMPS. If you think you have MUMPS, see your doctor. Because this infection is caused by a virus, antibiotics aren’t effective. Get plenty of rest and drink lots of fluids. Take over-the-counter anti-inflammatory medicines to relieve the pain. Cold compresses may also help. Avoid activities that cause forceful physical contact with your abdomen.",
+  },
+  "Do you have reddish, raised, excessive tissue that seems to be growing around the area of a scar or piercing?": {
+    heading: "You may have a KELOID. This is a benign growth that occurs at sites of previous injury to the skin.",
+    content: "See your doctor. Your doctor may perform injections of corticosteroids into the KELOID or potentially consider removing it.",
+  },
+
+
+  // fever in us
+  "Does your fever come and go and does your temperature stay between 97° and 102°F?": {
+    heading: "You may have MONONUCLEOSIS (also known as MONO), which is a viral infection that can lead to swollen glands in your neck and a swollen/tender spleen (an organ in your abdomen).",
+    content: "See your doctor.",
+  },
+  "Have you had a fever for weeks, along with tiredness and a sore throat?": {
+    heading: "You may have MONONUCLEOSIS (also known as MONO), which is a viral infection that can lead to swollen glands in your neck and a swollen/tender spleen (an organ in your abdomen).",
+    content: "See your doctor.",
+  },
+  "Do you have a fever between 101°F and 103°F?": {
+    heading: "You may have MONONUCLEOSIS (also known as MONO), which is a viral infection that can lead to swollen glands in your neck and a swollen/tender spleen (an organ in your abdomen).",
+    content: "See your doctor.",
+  },
+  "Do you have a sore throat and headache, but no cough?": {
+    heading: "You may have a bacterial infection, such as STREP THROAT.",
+    content: "Get plenty of rest, drink lots of fluids, and take cold and fever-reducing medicines, such as acetaminophen and/or ibuprofen. If you don’t feel better in 48 hours, see your doctor. A quick test can determine whether you have STREP THROAT. Antibiotics are effective in treating the bacteria that causes this infection.",
+  },
+  "Do you have a sore throat, a dry cough, tiredness, mild headaches, or muscle aches?": {
+    heading: "You may have a COLD or the FLU.",
+    content: "Get plenty of rest and drink lots of fluids. Over-the-counter- medicines may help relieve your symptoms. See your doctor if your symptoms become severe. Prevent the FLU by getting the flu vaccine in the fall.",
+  },
+  "Do you have aches, chills, nausea, vomiting, cramps, or watery diarrhea?": {
+    heading: "You may have GASTROENTERITIS, an intestinal infection commonly called the STOMACH FLU.",
+    content: "Get plenty of rest. Stop eating and drinking for a few hours to let your stomach settle. Ease back into eating gradually and start with bland foods (e.g., bananas, rice, applesauce, and toast). Take small, frequent sips of water or clear liquids to avoid dehydration. See your doctor if you have BLOODY DIARRHEA, if you’ve been vomiting for more than 2 days, or if you’re vomiting blood.",
+  },
+  "Are you short of breath and do you have a cough that produces red, yellow, green, or tan mucus?": {
+    heading: "You may have a serious infection, such as TUBERCULOSIS or HIV/AIDS, or CANCER.",
+    content: "See your doctor right away.",
+  },
+  "Have you lost weight unintentionally, and do you have a fever that comes and goes, night sweats (drenching your bed sheets or bedclothes), or swollen lymph nodes?": {
+    heading: "You may have a serious infection, such as TUBERCULOSIS or HIV/AIDS, or CANCER.",
+    content: "See your doctor right away.",
+  },
+  "Do you have stomach pain, nausea, and/or vomiting?": {
+    heading: "You may have a severe medical problem, such as APPENDICITIS, DIVERTICULITIS, PANCREATITIS, HEPATITIS, or COLITIS. Each of these involve infection and/or inflammation of the gastrointestinal tract or organs in your abdomen.",
+    content: "See your doctor, go to the closest emergency room right away, or call an ambulance.",
+  },
+  "Do you have a rash that’s red, tender and warm, or a red streak on your arm or leg?": {
+    heading: "You may have an infection of the skin or lymph system, such as CELLULITIS or LYMPHANGITIS.",
+    content: "Both conditions need to be treated with antibiotics. See your doctor right away.",
+  },
+  "Do you have an earache?": {
+    heading: "You may have a middle ear infection (OTITIS MEDIA) or an outer ear infection (SWIMMER’S EAR or OTITIS EXTERNA).",
+    content: "While these will likely resolve on their own, some of the infections may require treatment. See your doctor if your ear pain is severe, if your symptoms worsen, or if symptoms fail to improve within 48 hours of starting.",
+  },
+  "Have you been outside under high temperatures and are you feeling nauseous or faint?": {
+    heading: "You may have HEAT EXHAUSTION or HEAT STROKE.",
+    content: "Drink cool liquids and rest in a cool location. Lay down and elevate your legs above the level of your heart. You can also get into a cold bath or even ice water bath. Recheck your temperature often until it has returned to normal. If your temperature goes higher, have someone take you to the emergency room.",
+  },
+  "Have you recently started taking a new medicine?": {
+    heading: "Your fever may be a side effect of your MEDICINE.",
+    content: "Call your doctor.",
+  },
+  "Is your temperature consistently above 103°?": {
+    heading: "",
+    content: "Call your doctor.",
+  },
+  "Are you short of breath or are you coughing up mucus or blood?": {
+    heading: "You may have PNEUMONIA or PULMONARY EMBOLUS.",
+    content: "You may have PNEUMONIA or PULMONARY EMBOLUS.",
+  },
+  "Are you experiencing pain or burning when you urinate, or do you have back or abdominal pain, along with nausea/vomiting?": {
+    heading: "You may have PYELONEPHRITIS, a potentially serious kidney infection.",
+    content: "You may have PYELONEPHRITIS, a potentially serious kidney infection.",
+  },
+  "Do you have a severe headache, neck stiffness, drowsiness, and vomiting, and are your eyes sensitive to light or are your ears sensitive to sound?": {
+    heading: "You may have MENINGITIS, an inflammation of the membranes that cover the brain and spinal cord.",
+    content: "See your doctor, go to the closest emergency room right away, or call an ambulance.",
+  },
+  "Have you been outside in extremely hot weather, and are you hot but not sweating, possibly feeling faint or having some confusion?": {
+    heading: "You may have HEAT STROKE or HEAT EXHAUSTION.",
+    content: "Get out of the sun and go somewhere shady or with air conditioning. Have someone take you to the closest emergency room right away or call an ambulance.",
+  },
+
+
+  // foot problems
+  "Is the person a child or a newborn with a foot deformity?": {
+    heading: "Foot deformities are not unusual in newborns. CLUBFOOT is a common disorder in which one or both feet are turned inward or downward.",
+    content: "Foot deformities are not unusual in newborns. CLUBFOOT is a common disorder in which one or both feet are turned inward or downward.",
+  },
+  "Is the person a child or a toddler with toes that point in?": {
+    heading: "The cause may be INCREASED FEMORAL ANTEVERSION, INTERNAL TIBIAL TORSION, or METATARSUS ADDUCTUS (these three are commonly called intoeing).",
+    content: "See your doctor. Your doctor may order imaging or may watch and see if it resolves once the child begins to walk.",
+  },
+  "Did your foot pain begin after intense physical activity, or has the pain slowly worsened over an extended period of time?": {
+    heading: "You may have a STRESS FRACTURE of the bones in your foot. The pain from stress fractures usually decreases with rest and increases with activity.",
+    content: "Apply ice to the foot and take an over-the-counter anti-inflammatory medicine to relieve pain. See your doctor if you don’t feel better within a few days.",
+  },
+  "Did your foot pain or swelling begin with an injury or accident?": {
+    heading: "",
+    content: "Visit your doctor",
+  },
+  "Is there swelling or redness on top of your foot?": {
+    heading: "Your pain may be from damage to the skin or tendons on top of the foot.",
+    content: "Use ice and an over-the-counter anti-inflammatory medicine. See your doctor if the pain doesn’t get better within a few days.",
+  },
+  "Are you unable to stand or walk on your foot and is your foot swollen or bruised?": {
+    heading: "Your foot or ankle bone may be FRACTURED.",
+    content: "See your doctor promptly. Raise the leg above your heart while sitting or lying down and place ice and a compressive wrap on the swollen area. Consider a soft, but compressive brace and crutches. Take an over-the-counter analgesic, such as ibuprofen to help relieve pain.",
+  },
+  "Is there pain on the bottom of your foot between the ball and the heel?": {
+    heading: "You may have SPRAINED the ligament in the arch of the foot. Also see PLANTA FASCIITIS below.",
+    content: "Use shoes with an arch support and take an over-the-counter anti-inflammatory medicine. See your doctor if the pain is severe or if you can’t walk on the foot.",
+  },
+  "Is the pain only in one toe and did it start after you hit, twisted, or jammed the toe?": {
+    heading: "Your pain may be from TURF TOE (a sprained big toe), a PULLED LIGAMENT, or from a TOE FRACTURE.",
+    content: "See your doctor. Applying ice or taping the sore toe to the toe next to the sore toe (with padding in between the toes) can help relieve the pain.",
+  },
+  "Do you have a fever and are your joints tender, sore, red, or swollen?": {
+    heading: "RHEUMATOID ARTHRITIS may be the cause of the pain. A fever, along with a painful, swollen joint could be caused by an INFECTED JOINT. More than one affected, inflamed, or red joint could mean RHEUMATIC FEVER.",
+    content: "See your doctor. Treatment for RHEUMATOID ARTHRITIS may include medicines, physical therapy, exercise, and in some cases, surgery.",
+  },
+  "Do you have a red, swollen big toe that hurts when anything touches it?": {
+    heading: "You may have GOUT (inflammation caused by high uric acid level in the blood).",
+    content: "See your doctor. During a GOUT attack or flare up, you should rest in bed. You can put a hot pad or an ice pack on your ankle to ease the pain. Avoid high fat meals or alcohol, since they are potential triggers of attacks or flare ups.",
+  },
+  "Do you have intense pain near your heel when you put weight on it?": {
+    heading: "Your pain may be from a HEEL SPUR, a small bulge from the heel bone. More likely, the pain can be due to PLANTAR FASCIITIS or PLANTAR FASCIAL FIBROMATOSIS.",
+    content: "See your doctor. Your doctor can suggest special stretching exercises to help relieve the pain. A soft insole or a firm insole with a hole under the spur may also help. For PLANTAR FASCIITIS, you can also use a golf ball to massage the sore area, as well as a plastic bottle filled with frozen water (ice massage).",
+  },
+  "Do you have a moist, white, or red area of peeling skin and itching between your toes, and/or scaling and itching skin on your foot, often in a “moccasin distribution”?": {
+    heading: "These may be symptoms of a fungal infection called ATHLETE’S FOOT.",
+    content: "Use an over-the-counter athlete’s foot spray or cream. Wash your feet thoroughly with soap and water twice a day. Be sure to dry your feet completely and consider frequent sock changes. If your symptoms aren’t better in 1 to 2 weeks, see your doctor. If the affected area is very red and tender, see your doctor sooner.",
+  },
+  "Have your toes or feet been exposed to very cold temperatures?": {
+    heading: "FROSTBITE may damage your skin and tissues.",
+    content: " See your doctor. Warm the feet by immersing them in lukewarm (not hot) water or by applying warm cloths to the affected area.",
+  },
+
+
+  // Hair Loss Problems
+  "Is your hair falling out in small patches? Are these patches red, itchy, or oily?": {
+    heading: "This type of hair loss can be caused by SEBORRHEA, LICHEN PLANUS, or RINGWORM.",
+    content: "See your doctor.",
+  },
+  "Are you a man who has gradually lost hair in the front or on the top of your head and has relatives with similar hair loss?": {
+    heading: "You may have classic MALE-PATTERN BALDNESS.",
+    content: "Over-the-counter and prescription medicines are available to treat male-pattern baldness. See your doctor. He or she will determine which treatment is right for you.",
+  },
+  "Have you used any chemicals on your hair, or have you worn tight braids or cornrows recently?": {
+    heading: "Your hair loss may be from FOLLICULAR DAMAGE (traction on the roots of the hair lead to hair loss).",
+    content: "Tight braids, ponytails, or cornrows can break and damage hair. Secure hair with covered rubber bands and try not to style it too tightly. Discontinue the use of harsh chemicals on the hair and scalp, which can also result in hair loss.",
+  },
+  "Are you taking any new medicines, or are you being treated for cancer?": {
+    heading: "Hair loss may be a side effect of MEDICINES, STEROIDS, or CHEMOTHERAPY (cancer treatment).",
+    content: "Discuss these treatments with your doctor.",
+  },
+  "Have you been weak, tired, or anxious?": {
+    heading: "You may have IRON or ZINC DEFICIENCY, THYROID DISEASE, or you are suffering from excess STRESS.",
+    content: "See your doctor.",
+  },
+  "Are you a woman who is older than 50, or have you given birth within the last three months?": {
+    heading: "HORMONE CHANGES may cause hair loss in women. If your hair loss has occurred gradually with advancing age, FOLLICULAR DEGENERATION (hair roots don’t work as well as previously) may be the cause.",
+    content: "Post-pregnancy hormone changes usually reverse themselves without any treatment. While follicular degeneration cannot be reversed, gentle hair care may prolong the life of follicles.",
+  },
+  "Do you have a completely smooth patch where you lost hair with no broken or smaller hairs noted in the area?": {
+    heading: "This is known as ALOPECIA AREATA.",
+    content: "See your doctor. Your doctor can perform some tests, and could possibly treat you with steroid injections to the area.",
+  },
+  "Have you lost all of the hair all over your scalp? Or have you lost all of your hair all over your entire body? This would include eyebrows, genitals, armpits, face, etc.?": {
+    heading: "This is known as ALOPECIA TOTALIS (scalp hair loss) or ALOPECIA UNIVERSALIS (whole body).",
+    content: "This condition is thought to be related to your immune system attacking all of your hair cells. It is often a permanent condition, but hair can regrow, even many years later.",
+  },
+
+  // Arm Problems
+  "Is the affected area deformed or swollen?": {
+    heading: "You may have a FRACTURED bone.",
+    content: " See your doctor right away. Apply ice packs to the affected area. Use a sling to help hold the arm still and reduce pain. Use an over-the-counter pain medicine, such as ibuprofen, to relieve pain and reduce swelling.",
+  },
+  "Does the pain get worse when you move your arm, hand, or wrist?": {
+    heading: "If there is no fracture, the limb may be SPRAINED.",
+    content: "Avoid activities that cause pain. Apply ice and don’t move your arm. Use an over-the-counter medicine such as ibuprofen to relieve pain and reduce swelling. See your doctor if the pain gets worse.",
+  },
+  "Does the pain get worse with repetitive movement (e.g., while working or playing a sport)?”": {
+    heading: "If there is no fracture, the limb may be SPRAINED.",
+    content: "Avoid activities that cause pain. Apply ice and don’t move your arm. Use an over-the-counter medicine such as ibuprofen to relieve pain and reduce swelling. See your doctor if the pain gets worse.",
+  },
+  "Is it painful to grip a doorknob, and does the pain start on the outside of your elbow and move down your arm to your wrist?": {
+    heading: "You may have LATERAL EPICONDYLITIS (i.e., tennis elbow).",
+    content: "Avoid activities that cause pain. Apply ice and a compressive bandage or sleeve. Use an over-the-counter medicine, such as ibuprofen, to relieve pain and reduce swelling. See your doctor if the pain gets worse or does not improve with rest.",
+  },
+  "Do you have numbness or pain in your fingers, hand, wrist, or arm, especially when you flex your wrist (i.e., bend your palm toward your forearm)?": {
+    heading: "You may have CARPAL TUNNEL SYNDROME, a compression of the median nerve in the wrist and hand.",
+    content: "Use anti-inflammatory medicine, such as ibuprofen, to reduce pain and swelling. A wrist splint worn at night may also ease pain and numbness. If your symptoms don’t improve, see your doctor.",
+  },
+  "Do you have a firm lump or swelling near your wrist or finger joints?": {
+    heading: "You may have a GANGLION CYST, a common non-cancerous cyst.",
+    content: "See your doctor if the cyst causes pain or begins to grow rapidly.",
+  },
+  "Are one or more joints swollen and tender? Do you have a fever?": {
+    heading: "You may have RHEUMATOID ARTHRITIS, an inflammatory joint condition. You may also have GOUT, or an INFECTION (with fever) of the joint or bone.",
+    content: "See your doctor right away. Use an anti-inflammatory medicine, such as ibuprofen, to relieve pain and reduce swelling.",
+  },
+  "Does your thumb hurt with gripping, typing, or writing with a pencil or pen?": {
+    heading: "You may have CARPAL TUNNEL SYNDROME or de QUERVAIN’S TENOSYNOVITIS.",
+    content: "For CARPAL TUNNEL SYNDROME, use an anti-inflammatory medicine, such as ibuprofen, to reduce pain and swelling. A wrist splint worn at night may also ease pain and numbness. If your symptoms don’t improve, see your doctor. For de QUERVAIN’S TENOSYNOVITIS, your doctor may prescribe, or you can purchase an over-the-counter splint that does not allow your thumb to move. See your doctor if the pain worsens or does not improve with rest.",
+  },
+
+
+  // headaches and other prblems 
+  "Do you have a fever, cold symptoms, nausea, vomiting, or diarrhea?": {
+    heading: "You may have the COLD or the FLU or GASTROENTERITIS (stomach flu).",
+    content: "Get plenty of rest and drink plenty of water. Use over-the-counter medicine to relieve cold and flu symptoms and for diarrhea. Do not give cough or cold medicines to children under 5 years.",
+  },
+  "Do you have a severe headache, stiff neck, vomiting, and does normal light hurt your eyes, or do normal sounds hurt your ears?": {
+    heading: "You may have MENINGITIS, a serious infection of the fluid around your brain and spinal cord, or INTRACRANIAL HEMORRHAGE (i.e., bleeding inside the brain).",
+    content: " See your doctor or go to the emergency room right away.",
+  },
+  "Have you injured your head or been knocked out recently?": {
+    heading: "You may have a CONCUSSION (also called MILD TRAUMATIC BRAIN INJURY), or a SUBDURAL HEMATOMA, a serious condition caused by blood pushing on your brain.",
+    content: " See your doctor or go to the emergency room right away.",
+  },
+  "Do you have numbness, tingling, or weakness in the arms and legs, or do you have trouble speaking or understanding speech?": {
+    heading: "You may be having a STROKE or a TRANSIENT ISCHEMIC ATTACK (i.e., mini-stroke).",
+    content: " See your doctor or go to the emergency room right away.",
+  },
+  "Do you have pressure around your eyes, or do you have congestion with yellowish-green nasal discharge and a fever?": {
+    heading: "You may have a sinus infection or SINUSITIS.",
+    content: "Treat fever, headache, and sore throat with over-the-counter medicines, such as ibuprofen or acetaminophen. An over-the-counter decongestant and saline nasal spray may help relieve other symptoms. See your doctor if the pain becomes severe or your fever persists or symptoms last for more than 10 days.",
+  },
+  "Do you have mild to moderate pressure or tightening around your temples, and does the pain occur during times of stress or after you have been sitting in one position for a long time?": {
+    heading: "You may have a TENSION HEADACHE.",
+    content: "Use over-the-counter medicine, such as ibuprofen or acetaminophen, to relieve pain. Getting plenty of rest, taking a hot shower, and applying ice packs to painful areas may also help.",
+  },
+  "Do you have intense throbbing pain on one side of your head or temple, often with associated nausea or vomiting, and do see flashing lights or spots before the headache?": {
+    heading: "You may suffer from MIGRAINE headaches.",
+    content: "See your doctor. Your doctor can diagnose your problem and may prescribe prescription medicine for migraines. In the meantime, use over-the-counter medicine, such as ibuprofen or acetaminophen, to relieve pain. You can also rest in a dark room and apply ice packs and gentle pressure to painful areas.",
+  },
+  "Do your headaches occur after you read, watch TV, or use a computer?": {
+    heading: "Your headaches may be due to VISION PROBLEMS.",
+    content: "See an optometrist or ophthalmologist for an eye exam to see if you need glasses or contacts to correct your vision. Give yourself frequent eye breaks while reading or studying for extended periods of time.",
+  },
+  "Do you get headaches and feel shaky and weak if you miss a meal?": {
+    heading: "Your headaches may be from HYPOGLYCEMIA (i.e., low blood sugar).",
+    content: "See your doctor. You can also try eating 6 small meals a day rather than 3 large meals. This may regulate your blood sugar.",
+  },
+  "Are you trying to cut down on caffeine, alcohol, or some other drug?": {
+    heading: "You may be suffering from withdrawal.",
+    content: "Use over-the-counter medicine, such as ibuprofen or acetaminophen, to relieve pain and discomfort. Although painful, the symptoms are temporary and should fade after a few days. Don’t restart your habit.",
+  },
+  "Do you have headaches that occur daily for several days, and do you also have eye discharge and runny nose from the same side as the headache?": {
+    heading: "You have CLUSTER HEADACHES.",
+    content: "These are best treated with oxygen, but you can also use certain medicines, such as over-the-counter anti-inflammatory medicines (e.g., ibuprofen or naproxen). See your doctor.",
+  },
+
+
+  // hips problems
+  "Did you fall or suddenly feel your hip give way?": {
+    heading: "Your pain and deformity may be from a HIP FRACTURE.",
+    content: " Go to the closest emergency room or call an ambulance.",
+  },
+  "Do the toes on your leg on the side of your injured hip seem to turn out, and does it hurt to straighten, lift, or stand on your leg?": {
+    heading: "Your pain and deformity may be from a HIP FRACTURE.",
+    content: " Go to the closest emergency room or call an ambulance.",
+  },
+  "Do you have stiffness, swelling, redness, or pain in any other joints?": {
+    heading: "Your hip pain may be from ARTHRITIS.",
+    content: "Try an anti-inflammatory medicine. If you don’t feel better, see your doctor.",
+  },
+  "Have you felt a “click” in your hip or occasional pain with activity?": {
+    heading: "You may have a CONGENITAL HIP PROBLEM, a deformity of the hip joint that began before birth. You may also have TROCHANTERIC BURSITIS, an inflammation of the outside (lateral) part of your hip.",
+    content: "See your doctor.",
+  },
+  "Do you have pain in the back of your hip that starts in your lower back and travels into your buttocks or into your leg?": {
+    heading: "Your symptoms may be from SCIATICA, a pinched nerve. If the pain shoots down your leg near your knee or to your foot, this could also be from a RUPTURED or HERNIATED DISC in your low back.",
+    content: "Heat, anti-inflammatory medicine, and rest may help. See your doctor if the pain continues or if it travels down your leg. Contact your doctor immediately if you develop difficulty controlling urination or bowel movements, have fever, have a history of cancer, or experience unintentional weight loss.",
+  },
+  "Is the person a child with pain in the knees, hips, or groin?": {
+    heading: "This could be related to a number of disorders, including a SLIPPED CAPITAL FEMORAL EPIPHYSIS (often associated with teenagers who are overweight or obese).",
+    content: "See your doctor.",
+  },
+  "Do you have pain in your hip that is also on the outside (lateral) part of your knee?": {
+    heading: "You may have ILIOTIBIAL BAND SYNDROME. This is more common in runners and cyclists (straight-ahead activities).",
+    content: "Stretching and applying ice can help. See your doctor if the pain and discomfort worsens or does not improve with rest.",
   },
   "": {
-    heading: "Treatment for Disease I",
-    content: "Treatment for Disease I",
+    heading: "",
+    content: "",
+  },
+  "": {
+    heading: "",
+    content: "",
   },
 
   // Add more disease-treatment mappings as needed

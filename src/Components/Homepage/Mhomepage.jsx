@@ -46,8 +46,8 @@ const Mhomepage = () => {
                             </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            Homepage consist of four main sections:The Diet Library,Food Library,Exercise and Disease Predition
+
 
                         </AccordionPanel>
                     </AccordionItem>
@@ -64,8 +64,7 @@ const Mhomepage = () => {
                             </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            The Diet Library provides users with information on various diet types.
 
                         </AccordionPanel>
                     </AccordionItem>
@@ -82,8 +81,8 @@ const Mhomepage = () => {
                             </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            The Food library offers food recipes and personalized diet plan based on users calorie need  and calorie consumption and a calorie tracker.
+
 
                         </AccordionPanel>
                     </AccordionItem>
@@ -100,8 +99,7 @@ const Mhomepage = () => {
                             </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            The Exercise section suggest and provide with a wide range of exercise depend on 2 type like the body part which you want to train or the equipment avaliability
 
                         </AccordionPanel>
                     </AccordionItem>
@@ -118,8 +116,7 @@ const Mhomepage = () => {
                             </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        Disease Prediction section assists users in identifying potential health issues based on selected symptoms and provides relavant treatment recommendation.
 
                         </AccordionPanel>
                     </AccordionItem>

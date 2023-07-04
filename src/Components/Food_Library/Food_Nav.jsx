@@ -1,7 +1,7 @@
 import { List, ListIcon, ListItem } from '@chakra-ui/react'
 import { React, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { CalendarIcon, CloseIcon, EditIcon, QuestionOutlineIcon } from "@chakra-ui/icons";
+import { CalendarIcon, CloseIcon,TimeIcon,ViewIcon,Search2Icon,SearchIcon, EditIcon, QuestionOutlineIcon } from "@chakra-ui/icons";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 const Food_Nav = () => {
@@ -15,7 +15,7 @@ const Food_Nav = () => {
   }, [])
   return (
     <>
-      <List color="white" fontSize={{ base: "1.2rem", md: "1.4rem", xl: "1.4rem" }}
+      <List color="white" fontSize={{ base: "1.2rem", md: "1.4rem", xl: "1.2rem" }}
 
         pb="2rem" spacing={3} >
         <ListItem
@@ -23,7 +23,7 @@ const Food_Nav = () => {
           data-aos="fade-right"
         >
           <NavLink to="/FoodLibrary/Howto">
-            <ListIcon as={CalendarIcon} color="white" />
+            <ListIcon as={QuestionOutlineIcon} color="white" />
             How to search
           </NavLink>
         </ListItem>
@@ -33,7 +33,7 @@ const Food_Nav = () => {
 
         >
           <NavLink to="/FoodLibrary/FoodNutrition">
-            <ListIcon as={QuestionOutlineIcon} color="white" />
+            <ListIcon as={SearchIcon} color="white" />
 
             Food Nutrition Value
           </NavLink>
@@ -56,7 +56,7 @@ const Food_Nav = () => {
 
         >
           <NavLink to="/FoodLibrary/DietPlanGenerator">
-            <ListIcon as={CloseIcon} color="white" />
+            <ListIcon as={CalendarIcon} color="white" />
             Diet Plans
           </NavLink>
         </ListItem>
@@ -66,7 +66,7 @@ const Food_Nav = () => {
 
         >
           <NavLink to="/FoodLibrary/Dietplanner">
-            <ListIcon as={CloseIcon} color="white" />
+            <ListIcon as={EditIcon} color="white" />
             Custom Diet Plan
           </NavLink>
         </ListItem>
@@ -76,7 +76,7 @@ const Food_Nav = () => {
 
         >
           <NavLink to="/FoodLibrary/CalorieTracker">
-            <ListIcon as={CloseIcon} color="white" />
+            <ListIcon as={TimeIcon} color="white" />
             Calorie Tracker
           </NavLink>
         </ListItem>
@@ -86,7 +86,7 @@ const Food_Nav = () => {
 
         >
           <NavLink to="/FoodLibrary/GetCalories">
-            <ListIcon as={CloseIcon} color="white" />
+            <ListIcon as={ViewIcon} color="white" />
             Get Calories
           </NavLink>
         </ListItem>

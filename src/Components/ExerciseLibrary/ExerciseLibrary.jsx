@@ -123,19 +123,9 @@ const ExerciseLibrary = () => {
             {/* the side heading of the tabel */}
 
 
-        </Grid >
+        </Grid>
     )
 }
 
 export default ExerciseLibrary
 
-// import { Box, Text, Button, Input } from "@chakra-ui/react";
-
-// import React from "react";
-// const ExerciseLibrary = () => {
-//   return (
-
-//   );
-// };
-
-// export default ExerciseLibrary ;
