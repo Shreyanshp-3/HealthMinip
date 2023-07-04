@@ -2,7 +2,7 @@ import React from 'react'
 
 const FeedbackNav = () => {
   return (
-    <div>FeedbackNav</div>
+    <div></div>
   )
 }
 

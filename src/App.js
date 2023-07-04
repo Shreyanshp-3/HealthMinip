@@ -41,17 +41,14 @@ import Feedback from './Components/Feedback/Feedback';
 import FeedbackNav from './Components/Feedback/FeedbackNav';
 
 
-
 function App() {
     return (
-        <>
-            {/* this is the fixed navbar */}
+        <>{/* this is the fixed navbar */}
             <Navbar />
             {/* <Navbar /> */}
             <div className='routes1'>
 
                 <Grid templateColumns="repeat(6,1fr)" bg="white">
-
 
                     {/* this is the new navbar of the item list present in the columns */}
                     <GridItem

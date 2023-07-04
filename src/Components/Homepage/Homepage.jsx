@@ -400,11 +400,11 @@ const Homepage = () => {
                 className='hidden'
                 data-aos="fade-up"
                 as="main"
+                p={0}
+                m={0}
                 colSpan={{ base: 6, lg: 6, xl: 6 }}
-                p={{ base: "1rem", lg: "2rem", xl: "3rem" }}
+                // p={{ base: "1rem", lg: "2rem", xl: "3rem" }}
             >
-                <br />
-                <br />
                 <Box maxW='64rem'>
                     <Rough />
 

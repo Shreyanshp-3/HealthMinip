@@ -10,9 +10,9 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
-  } from '@chakra-ui/react'
-  
-  import { useDisclosure } from '@chakra-ui/react'
+} from '@chakra-ui/react'
+
+import { useDisclosure } from '@chakra-ui/react'
 import v1 from './images/v1.jpeg';
 import v2 from './images/v2.jpeg';
 import v3 from './images/v3.jpeg';
@@ -88,10 +88,12 @@ const VeganDiet = () => {
                                 <Text>
                                     It is essential to have a roadmap for a healthy and balanced vegan plan.
                                 </Text>
-                                <Button onClick={onOpen}
-                                    colorScheme='purple'>Read More !</Button>
+                                <a href="https://www.mynetdiary.com/starting-a-vegan-diet.html" target="_blank" rel="noopener noreferrer">
 
-                             
+                                    <Button colorScheme='purple'>Read More!</Button>
+                                </a>
+
+
                             </Stack>
                         </CardBody>
 
@@ -123,8 +125,10 @@ const VeganDiet = () => {
                                 <Text>
                                     Thinking about a vegan diet? Here are the six most important nutrients for vegan and the supplements you might need .
                                 </Text>
-                                <Button onClick={onOpen}
-                                    colorScheme='purple'>Read More !</Button>
+                                <a href="https://www.mynetdiary.com/6_essential_nutrients_for_vegans.html" target="_blank" rel="noopener noreferrer">
+
+                                    <Button colorScheme='purple'>Read More!</Button>
+                                </a>
 
                             </Stack>
                         </CardBody>
@@ -157,8 +161,10 @@ const VeganDiet = () => {
                                 <Text>
                                     Here are our favorite plant based proof sources that will fill and fuel you.
                                 </Text>
-                                <Button onClick={onOpen}
-                                    colorScheme='purple'>Read More !</Button>
+                                <a href="https://www.mynetdiary.com/do-vegan-diets-give-you-enough-protein-plant-based-protein-sources.html" target="_blank" rel="noopener noreferrer">
+
+                                    <Button colorScheme='purple'>Read More!</Button>
+                                </a>
 
                             </Stack>
                         </CardBody>
@@ -192,8 +198,10 @@ const VeganDiet = () => {
                                     Tofu is versatile, nutritious and adapts well to many different kind of recipes.
 
                                 </Text>
-                                <Button onClick={onOpen}
-                                    colorScheme='purple'>Read More !</Button>
+                                <a href="https://www.mynetdiary.com/how-to-use-tofu-in-more-tasty-ways.html" target="_blank" rel="noopener noreferrer">
+
+                                    <Button colorScheme='purple'>Read More!</Button>
+                                </a>
 
                             </Stack>
                         </CardBody>

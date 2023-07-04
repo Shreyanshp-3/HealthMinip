@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExerciseNav = () => {
   return (
-    <div>ExerciseNav</div>
+    <div></div>
   )
 }
 

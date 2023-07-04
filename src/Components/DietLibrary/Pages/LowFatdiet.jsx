@@ -90,10 +90,13 @@ const LowFatdiet = () => {
                 <Text>
                   Whether you are following a low fat diet for weight loss, My health diary is here to help you...
                 </Text>
-                              <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
 
-               
+                <a href="https://www.mynetdiary.com/low-fat-eating-plan.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -125,8 +128,10 @@ const LowFatdiet = () => {
                 <Text>
                   Learn about the different types of fats and how to make healthier food choices.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/dietary-fats.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
               </Stack>
             </CardBody>
 
@@ -158,10 +163,12 @@ const LowFatdiet = () => {
                 <Text>
                   Try this fool proof method for limiting extra fats and calories.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/simple-n-healthful-meal-planner-plate-method.html" target="_blank" rel="noopener noreferrer">
 
-               
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -192,10 +199,12 @@ const LowFatdiet = () => {
                 <Heading size='md'>Want to cook without oil? How to ditch the oil for every cooking method</Heading>
                 <Text>
                   Believe or not, its not hard to cook without oil.Here are out best tips and tricks                </Text>
-                  <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/cook-without-oil.html" target="_blank" rel="noopener noreferrer">
 
-              
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -227,10 +236,12 @@ const LowFatdiet = () => {
                 <Text>
                   Try these tips for cooking with herbs and spices.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/is-your-food-always-bland-you-may-be-missing-the-trick-with-these-spices-and-herbs.html" target="_blank" rel="noopener noreferrer">
 
-              
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -262,8 +273,10 @@ const LowFatdiet = () => {
                 <Text>
                   Set up your kitchen for success!
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/set-yourself-up-for-healthy-cooking.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
               </Stack>
             </CardBody>

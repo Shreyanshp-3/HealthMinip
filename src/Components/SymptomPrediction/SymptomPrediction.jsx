@@ -20,10 +20,9 @@ const symptoms = [
   { id: 16, name: "Arm Problems" },
   { id: 17, name: "Headaches" },
   { id: 18, name: "Hip Problems" },
-  { id: 19, name: "" },
-  { id: 20, name: "" },
-  { id: 21, name: "" },
-  { id: 22, name: "" },
+  { id: 19, name: "Knee Problem" },
+  { id: 20, name: "Menstrual Cycle Problem" },
+  { id: 21, name: "Nausea and Vomiting" },
 
   // Add more symptoms as needed
 ];
@@ -70,10 +69,13 @@ const diseasesData = {
 
 
 
-  "Symptom 3": ["", "", ""],
-  "Symptom 3": ["", "", ""],
-  "Symptom 3": ["", "", ""],
-  "Symptom 3": ["", "", ""],
+  "Knee Problem": ["Did your knee pain or swelling begin after a fall, twisting injury, or after your knee was hit by an object or person?", "Is your knee deformed?", "Is your kneecap swollen, tender, and warm, and do you have pain with activity?","Is your knee tender and swollen, and does the pain get worse after sitting for a long time or after using the stairs?","Do you have a sharp pain behind your knee and is it painful to extend (stretch out straight) your leg?","Is your knee swollen and/or red?","Do you have a fever along with swollen and/or red joints?","Has your knee become tender over many months or years and does the pain get worse when the weather changes?","Is the back of your knee swollen or tender?"],
+  
+
+  "Menstrual Cycle Problem": ["Do you have abdominal or pelvic pain during sex, ovulation, or bowel movements?", "Are your periods heavier or are you bleeding longer than usual?", "Do you use an intrauterine device (IUD) for birth control (contraception)?","Do you have a constant feeling that you need to urinate, or do you have pelvic pressure, constipation, or pain in your back or legs?", "Do you have muscle aches, swelling, or stiffness in your joints, tightness or swelling in your throat, and/or weakness in your legs?", "Are your periods irregular, infrequent, or have they stopped?", "Do you have breast tenderness, abdominal fullness, or nausea?", "Are you on birth control pills?", "Are you 35 years old or older?", "Have you felt sluggish, or have you gained or lost weight without trying?"],
+
+  "Nausea and Vomiting": ["Do you have a fever along with nausea and vomiting?", "Along with nausea and vomiting, do you also have dark urine and/or a yellow discoloration of your skin or the whites of your eyes, or are your stools turning white along with other cold and flu-like symptoms?", "Do you have cold and flu symptoms along with nausea, vomiting and/or diarrhea?", "Do you have a sharp pain that started in the middle of your abdomen by your belly button, but is now in the right lower quadrant, and have you lost your appetite?", "Do you have a headache or stiff neck, and do normal amounts of light hurt your eyes?", "Do you have pain in your right upper abdomen or do greasy foods make the pain worse?", "Do you have a burning pain in your abdomen between your breastbone and belly button? Does the pain often get better after eating?", "Did your sickness occur shortly after eating food? Did someone else also get the same symptoms after eating the same food?", "Have you vomited blood and/or had black, tarry stools? Does your vomit look like coffee grounds?","Do you have a burning feeling in your lower chest, along with a sour or bitter taste in your throat and mouth, especially after eating?","Are you taking any medicine, herbs, or vitamins?", "Have you missed a period or could you be pregnant?","Do you have diabetes or are you at risk of having diabetes?","Did you recently hit your head and now have a headache, blurred vision, or new numbness or tingling somewhere on your body?"],
+  // "Symptom 3": ["", "", ""],
   // Add more symptom-disease mappings as needed
 };
 
@@ -786,13 +788,145 @@ const treatmentData = {
     heading: "You may have ILIOTIBIAL BAND SYNDROME. This is more common in runners and cyclists (straight-ahead activities).",
     content: "Stretching and applying ice can help. See your doctor if the pain and discomfort worsens or does not improve with rest.",
   },
-  "": {
-    heading: "",
-    content: "",
+
+  // knew prlblme
+  "Did your knee pain or swelling begin after a fall, twisting injury, or after your knee was hit by an object or person?": {
+    heading: "Your knee may be FRACTURED and/or you may have seriously TORN some LIGAMENTS (tissue connecting bones to each other) in the internal part of the knee.",
+    content: " See your doctor or go to the emergency room right away.",
   },
-  "": {
-    heading: "",
-    content: "",
+  "Is your knee deformed?": {
+    heading: "Your knee may be FRACTURED and/or you may have seriously TORN some LIGAMENTS (tissue connecting bones to each other) in the internal part of the knee.",
+    content: " See your doctor or go to the emergency room right away.",
+  },
+  "Is your kneecap swollen, tender, and warm, and do you have pain with activity?": {
+    heading: "If you fell hard on your kneecap/patella it may be FRACTURED. Otherwise, it may be bruised or you may have PREPATELLAR BURSITIS, an irritation of a small lubricating sac (called bursa) in front of the kneecap.",
+    content: "See your doctor. Stretching and applying ice, as well as compression sleeves or wraps, may help with the discomfort and swelling.",
+  },
+  "Is your knee tender and swollen, and does the pain get worse after sitting for a long time or after using the stairs?": {
+    heading: "Your symptoms may be from TORN CARTILAGE/MENISCUS, a TORN LIGAMENT (tissue connecting bones to each other), or CHONDROMALACIA PATELLAE, the softening of the ligament or cartilage underneath the kneecap.",
+    content: "See your doctor. Rest and anti-inflammatory medicine, as well as a compression sleeve or wrap, may help relieve the pain. Physical therapy, stretching, and strengthening exercises can also help.",
+  },
+  "Do you have a sharp pain behind your knee and is it painful to extend (stretch out straight) your leg?": {
+    heading: "You may have a TORN HAMSTRING MUSCLE.",
+    content: "Apply ice to the area and use an anti-inflammatory medicine. You may also wrap your thigh with an elastic bandage or compression sleeve. Keep the injured leg elevated above the level of your heart. See your doctor if there’s excessive swelling or pain, or the pain does not improve with simple rest.",
+  },
+  "Is your knee swollen and/or red?": {
+    heading: "You may have a TORN HAMSTRING MUSCLE.",
+    content: "Apply ice to the area and use an anti-inflammatory medicine. You may also wrap your thigh with an elastic bandage or compression sleeve. Keep the injured leg elevated above the level of your heart. See your doctor if there’s excessive swelling or pain, or the pain does not improve with simple rest.",
+  },
+  "Do you have a fever along with swollen and/or red joints?": {
+    heading: "You may have RHEUMATOID ARTHRITIS, but you may also have a more serious problem, such as RHEUMATIC FEVER or a SEPTICE JOINT INFECTION.",
+    content: " See your doctor as soon as possible. Your doctor will be able to tell what’s causing your symptoms, and may refer you for or perform a joint aspiration (removing fluid from your knee joint).",
+  },
+  "Has your knee become tender over many months or years and does the pain get worse when the weather changes?": {
+    heading: "Chronic pain and stiffness may be caused by OSTEOARTHRITIS, which can develop over time or can be the result of previous surgeries or trauma.",
+    content: "Try an anti-inflammatory medicine. Applying heat to tender joints may also help relieve the pain. Regular physical activity can also improve symptoms. If your symptoms worsen or don’t improve, see your doctor.",
+  },
+  "Is the back of your knee swollen or tender?": {
+    heading: "The swelling may be from a BAKER’S CYST, which often occurs following a small tear of your CARTILAGE/MENISCUS, or can result from ARTHRITIS.",
+    content: "Try an anti-inflammatory medicine. You can also use a compressive wrap, bandage, or sleeve. Exercises for strengthening and stretching can also be helpful. If your symptoms worsen or don’t improve, see your doctor.",
+  },
+
+// menustrual cycle problem
+
+
+  "Do you have abdominal or pelvic pain during sex, ovulation, or bowel movements?": {
+    heading: "You may have a SEXUALLY TRANSMITTED INFECTION (STI), or a serious type of STI around your ovaries, fallopian tubes, and uterus, called PELVIC INFLAMMATORY DISEASE (PID).",
+    content: " See your doctor right away. Any infection in the abdomen can be serious.",
+  },
+  "Are your periods heavier or are you bleeding longer than usual?": {
+    heading: "The IUD may have caused this change in the pattern of your bleeding. The most frequent side effect is irregular bleeding (bleeding not related to your menstrual cycle), but usually an IUD will cause a significant decrease in the amount of bleeding and pain during your period.",
+    content: "See your doctor.",
+  },
+  "Do you use an intrauterine device (IUD) for birth control (contraception)?": {
+    heading: "The IUD may have caused this change in the pattern of your bleeding. The most frequent side effect is irregular bleeding (bleeding not related to your menstrual cycle), but usually an IUD will cause a significant decrease in the amount of bleeding and pain during your period.",
+    content: "See your doctor.",
+  },
+  "Do you have a constant feeling that you need to urinate, or do you have pelvic pressure, constipation, or pain in your back or legs?": {
+    heading: "Your symptoms may be from FIBROIDS, noncancerous tumors of the uterus.",
+    content: "See your doctor. The fibroids can potentially be controlled with medications, but may need to be removed with surgery.",
+  },
+  "Do you have muscle aches, swelling, or stiffness in your joints, tightness or swelling in your throat, and/or weakness in your legs?": {
+    heading: "You may have a problem with your THYROID GLAND, such as HASHIMOTO’S DISEASE (i.e., your body has created antibodies that attack your thyroid and lower its effectiveness).",
+    content: "See your doctor.",
+  },
+  "Are your periods irregular, infrequent, or have they stopped?": {
+    heading: "see a doctor and consult an adult member",
+    content: "See your doctor.",
+  },
+  "Do you have breast tenderness, abdominal fullness, or nausea?": {
+    heading: "You may have an OVARIAN CYST, or you may be PREGNANT.",
+    content: "If you could be pregnant, do an at-home pregnancy test. If it’s positive, see your doctor for confirmation. If you don’t think you’re pregnant and symptoms continue, see your doctor.",
+  },
+  "Are you on birth control pills?": {
+    heading: "Some women will miss a period while on BIRTH CONTROL PILLS. There is a small chance you could be PREGNANT.",
+    content: "Wait to see if you have a period at the end of your next pack of pills (when you take your sugar pills, you should have your period). See your doctor if you have signs of pregnancy or you don’t have a period after the second month.",
+  },
+  "Are you 35 years old or older?": {
+    heading: "Periods that stop after years of regularity may be caused by NORMAL or EARLY MENOPAUSE. Irregular periods may also be due to FIBROIDS, HORMONE PROBLEMS, or other medical conditions.",
+    content: "See your doctor.",
+  },
+  "Have you felt sluggish, or have you gained or lost weight without trying?": {
+    heading: "You may have a HORMONE PROBLEM, such as a THYROID GLAND problem. Periods may stop or become irregular if your weight falls dramatically, as can occur with ANOREXIA NERVOSA or BULIMIA.",
+    content: "See your doctor.",
+  },
+
+  // nausea and vomiting problems
+  "Do you have a fever along with nausea and vomiting?": {
+    heading: "You may have HEPATITIS, a disease that causes liver inflammation and is most commonly caused by a virus.",
+    content: "See your doctor right away. Hepatitis needs to be treated to avoid permanent liver damage.",
+  },
+  "Along with nausea and vomiting, do you also have dark urine and/or a yellow discoloration of your skin or the whites of your eyes, or are your stools turning white along with other cold and flu-like symptoms?": {
+    heading: "You may have HEPATITIS, a disease that causes liver inflammation and is most commonly caused by a virus.",
+    content: "See your doctor right away. Hepatitis needs to be treated to avoid permanent liver damage.",
+  },
+  "Do you have cold and flu symptoms along with nausea, vomiting and/or diarrhea?": {
+    heading: "You may have viral GASTROENTERITIS (stomach flu).",
+    content: "Drink plenty of fluids and get rest. Use an analgesic, such as acetaminophen to reduce fever. If your symptoms get worse or you don’t get any better after a few days, see your doctor. Contact your doctor if you have a high fever (greater than 101.5 degrees Fahrenheit) or your symptoms last for more than 10 days or if you are unable to tolerate liquids for more than 2 days.",
+  },
+  "Do you have a sharp pain that started in the middle of your abdomen by your belly button, but is now in the right lower quadrant, and have you lost your appetite?": {
+    heading: "You may have APPENDICITIS, an inflammation or infection of the appendix, or a BOWEL OBSTRUCTION.",
+    content: " See your doctor or go to the emergency room right away. An infected appendix could rupture within 24 hours if left untreated.",
+  },
+  "Do you have a headache or stiff neck, and do normal amounts of light hurt your eyes?": {
+    heading: "You may have MENINGITIS, a serious infection of the membranes around the brain.",
+    content: " See your doctor or go to the emergency room right away. Delayed treatment could result in serious injury or death.",
+  },
+  "Do you have pain in your right upper abdomen or do greasy foods make the pain worse?": {
+    heading: "You may have GALLSTONES or CHOLECYSTITIS, an infection or inflammation of the gallbladder.",
+    content: "See your doctor. Gallbladder and pancreas symptoms often come and go. You may still need medicine or surgery to take care of the problem. If the pain is intense or your fever is greater than 101.5 degrees Fahrenheit or persists for more than one day, see your doctor or go to the emergency room right away.",
+  },
+  "Do you have a burning pain in your abdomen between your breastbone and belly button? Does the pain often get better after eating?": {
+    heading: "You may have a PEPTIC ULCER or GASTRITIS caused by a bacterial infection from HELICOBACTER PYLORI.",
+    content: "See your doctor. Use an antacid to relieve pain and discomfort. You may need antibiotics to treat the infection.",
+  },
+  "Did your sickness occur shortly after eating food? Did someone else also get the same symptoms after eating the same food?": {
+    heading: "You may have FOOD POISONING caused by a toxin or bacteria from contaminated food. This is likely if someone else who ate the same food also became ill.",
+    content: "Drink plenty of fluids and get plenty of rest. Most episodes will clear up by themselves in 8 to 12 hours. If your symptoms are severe or you don’t get better, call your doctor.",
+  },
+  "Have you vomited blood and/or had black, tarry stools? Does your vomit look like coffee grounds?": {
+    heading: "You may have a bleeding ULCER or another serious condition, such as CANCER.",
+    content: " See your doctor or go to the emergency room right away.",
+  },
+  "Do you have a burning feeling in your lower chest, along with a sour or bitter taste in your throat and mouth, especially after eating?": {
+    heading: "You may have HEARTBURN.",
+    content: "Use an antacid to relieve pain and discomfort. If the pain or burning continue, or if you have symptoms most days of the week, call your doctor.",
+  },
+  "Are you taking any medicine, herbs, or vitamins?": {
+    heading: "Medicine or other supplements could be causing the nausea and vomiting as a side effect or adverse event.",
+    content: "See your doctor and tell him or her about any medicine or supplements you are taking.",
+  },
+  "Have you missed a period or could you be pregnant?": {
+    heading: "You may be PREGNANT.",
+    content: "Use an in-home pregnancy test, and if it is positive, confirm it with your doctor.",
+  },
+  "Do you have diabetes or are you at risk of having diabetes?": {
+    heading: "You may have KETOACIDOSIS, usually caused by high blood sugar.",
+    content: "Check your blood sugar if you have a glucometer and appropriate testing materials. See your doctor if your blood sugar is consistently and dramatically elevated (>300), if the symptoms are severe or last more than 24 hours. If you have not been diagnosed with diabetes and think you may be at risk, see your doctor.",
+  },
+  "Did you recently hit your head and now have a headache, blurred vision, or new numbness or tingling somewhere on your body?": {
+    heading: "You may have a serious HEAD or TRAUMATIC BRAIN INJURY, which is also known as a CONCUSSION. You may also have a BLEED on or around your brain.",
+    content: " See your doctor or go to the emergency room right away.",
   },
 
   // Add more disease-treatment mappings as needed

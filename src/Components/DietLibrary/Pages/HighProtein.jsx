@@ -93,9 +93,10 @@ const HighProtein = () => {
                 >
                   Read More !
                 </Button> */}
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More!</Button>
+                <a href="https://www.mynetdiary.com/get-started-on-high-protein-diet.html" target="_blank" rel="noopener noreferrer">
 
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
               </Stack>
             </CardBody>
 
@@ -127,8 +128,10 @@ const HighProtein = () => {
                 <Text>
                   Learn about the types of protein powder and How to use them.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/protein-powder-pros-and-cons.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
 
               </Stack>
@@ -162,8 +165,10 @@ const HighProtein = () => {
                 <Text>
                   Here's what one study found.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/get-started-on-high-protein-diet.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
 
               </Stack>
@@ -196,8 +201,10 @@ const HighProtein = () => {
                 <Heading size='md'>The benefits of eating protein</Heading>
                 <Text>
                   Learn about animal and plant based sources and how to make smart choices between them .                       </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/affordable-protein.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
 
 
@@ -231,8 +238,10 @@ const HighProtein = () => {
                 <Heading size='md'>Meet your protein needs or muscle gain</Heading>
                 <Text>
                   5 tips from a sports nutritionist for building and maintaining muscle.                </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/protein-needs-for-muscle-gain.htmlein-diet.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
 
 
@@ -267,8 +276,10 @@ const HighProtein = () => {
                 <Text>
                   Be a smart snacker with these tasty ideas.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/easy-high-protein-snacks.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
 
 

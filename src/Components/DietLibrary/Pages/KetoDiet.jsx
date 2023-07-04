@@ -91,8 +91,10 @@ const KetoDiet = () => {
                 <Text>
                   You done your research and want to get started on a keto diet, but aren't sure where to begin? Follow these steps
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/get_started_on_keto_diet_the_right_way_5_steps_for_success.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
               
               </Stack>
@@ -126,8 +128,10 @@ const KetoDiet = () => {
                 <Text>
                   Thinking about the monitoring ketones? You may get additional information about this down below
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/low-carb-diet-micronutrients.html" target="_blank" rel="noopener noreferrer">
+
+<Button colorScheme='purple'>Read More!</Button>
+</a>
 
               
               </Stack>
@@ -161,9 +165,10 @@ const KetoDiet = () => {
                 <Text>
                   If you're on the keto diet, here are the top 10 keto foods to include.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/these-are-the-top-10-keto-foods-you-should-include-if-you-re-on-the-diet.html" target="_blank" rel="noopener noreferrer">
 
+<Button colorScheme='purple'>Read More!</Button>
+</a>
                
               </Stack>
             </CardBody>
@@ -196,8 +201,10 @@ const KetoDiet = () => {
                 <Text>
                   You won't regret putting these tasty staples in your shopping cart.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/low-carb-diet-micronutrients.html" target="_blank" rel="noopener noreferrer">
+
+<Button colorScheme='purple'>Read More!</Button>
+</a>
 
                
               </Stack>
@@ -231,8 +238,10 @@ const KetoDiet = () => {
                 <Text>
                   Need help finding the beset keto Foods?. Follow the below like to get all the resources for keto diet.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/keto-food-grade.html" target="_blank" rel="noopener noreferrer">
+
+<Button colorScheme='purple'>Read More!</Button>
+</a>
 
              
               </Stack>
@@ -265,8 +274,10 @@ const KetoDiet = () => {
                 <Heading size='md'>Are you missing out on these important keto micro nutrients?</Heading>
                 <Text>
                   Is your keto diet lacking in micro nutrients? Make sure you are getting these important vitamins and minerals if you are following a keto diet.                </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                  <a href="https://www.mynetdiary.com/are-you-missing-out-on-these-keto-micronutrients-here-s-how-these-crucial-nutrients-play-a-role-in-your-very-low-carb-diet.html" target="_blank" rel="noopener noreferrer">
+
+<Button colorScheme='purple'>Read More!</Button>
+</a>
 
                
               </Stack>

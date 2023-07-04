@@ -89,10 +89,12 @@ const LowDiet = () => {
                 <Heading size='md'>Starting Low-Carb Diet : 5 Steps for Success</Heading>
                 <Text>
                   Whether you are starting a low carb diet for weight loss or blood sugar level. Follow these 5 steps to maximize your success.                </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/starting-a-low-carb-diet.html" target="_blank" rel="noopener noreferrer">
 
-              
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -123,10 +125,12 @@ const LowDiet = () => {
                 <Heading size='md'>10 Staples to turn your pantry healthy source for a low carb lifestyle</Heading>
                 <Text>
                   You won't regret putting these tasty Staples in your shopping cart. </Text>
-                  <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/low-carb-staples.html" target="_blank" rel="noopener noreferrer">
 
-              
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -157,10 +161,12 @@ const LowDiet = () => {
                 <Heading size='md'>Low Carb Food Grade</Heading>
                 <Text>
                   Need help finding healthy low carb foods? This might help you !                </Text>
-                  <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/low-carb-food-grade.html" target="_blank" rel="noopener noreferrer">
 
-              
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -191,10 +197,12 @@ const LowDiet = () => {
                 <Heading size='md'>Are you missing out on these important vitamins and minerals if you are following a low carb diet</Heading>
                 <Text>
                   Learn how to customize you targets and track more than 50000 nutrients with My fitness .                </Text>
-                  <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/low-carb-diet-micronutrients.html" target="_blank" rel="noopener noreferrer">
 
-               
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 

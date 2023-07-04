@@ -87,8 +87,10 @@ const Vegetarian = () => {
                 <Heading size='md'>Starting a vegetarian diet? Follow these steps to get maximum benefits</Heading>
                 <Text>
                   It is essential toa have a roadmap for a healthy and balanced vegetarian plan.                </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/starting-a-vegetarian-diet.html" target="_blank" rel="noopener noreferrer">
+
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
               </Stack>
             </CardBody>
@@ -121,10 +123,12 @@ const Vegetarian = () => {
                 <Text>
                   Thinking about a Vegetarian diet? Here are the six most important nutrients for vegan and the supplements you might need .
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/6-essential-nutrients-for-vegetarians.html" target="_blank" rel="noopener noreferrer">
 
-               
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -155,10 +159,12 @@ const Vegetarian = () => {
                 <Heading size='md'>Do Vegetarian diets give you enough protein </Heading>
                 <Text>
                   Wondering if you can meet your protein needs from a vegetarian diet?Yes, you you can, and here's how!.                </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/do-vegetarian-diets-give-you-enough-protein-plant-based-protein-sources.html" target="_blank" rel="noopener noreferrer">
 
-               
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
+
+
               </Stack>
             </CardBody>
 
@@ -190,28 +196,12 @@ const Vegetarian = () => {
                 <Text>
                   Learn how to prevent a type 2 Diabetes naturally by incorporating a plant based diet.
                 </Text>
-                <Button onClick={onOpen}
-                  colorScheme='purple'>Read More !</Button>
+                <a href="https://www.mynetdiary.com/how-to-prevent-diabetes-naturally.html" target="_blank" rel="noopener noreferrer">
 
-                <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
-                  <ModalOverlay />
-                  <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                      <Text fontWeight='bold' mb='1rem'>
-                        You can scroll the content behind the modal
-                      </Text>
-                      EWREWFSDF
-                    </ModalBody>
+                  <Button colorScheme='purple'>Read More!</Button>
+                </a>
 
-                    <ModalFooter>
-                      <Button colorScheme='purple' mr={3} onClick={onClose}>
-                        Close
-                      </Button>
-                    </ModalFooter>
-                  </ModalContent>
-                </Modal>
+
               </Stack>
             </CardBody>
 

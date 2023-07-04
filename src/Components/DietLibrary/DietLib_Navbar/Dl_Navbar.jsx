@@ -15,7 +15,7 @@ const DL_Navbar = () => {
   }, [])
   return (
     <>
-      <List color="white" fontSize={{ base: "1.2rem", md: "1.4rem", xl: "1.4rem" }}
+      <List color="white" fontSize={{ base: "1.2rem", md: "1.4rem", xl: "1.2rem" }}
 
         pb="2rem" spacing={3} >
         <ListItem
